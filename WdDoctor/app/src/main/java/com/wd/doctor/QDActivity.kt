@@ -5,6 +5,7 @@ import com.wd.doctor.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_q_d.*
 
 class QDActivity : BaseActivity() {
+    //不跟踪提交
 
 
     override fun initLayoutId(): Int {
