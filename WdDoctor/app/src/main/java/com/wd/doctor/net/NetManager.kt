@@ -4,11 +4,13 @@ import android.util.Log
 import android.widget.ImageView
 import com.squareup.picasso.Picasso
 import com.wd.doctor.util.ThreadUtil
+import jp.wasabeef.picasso.transformations.CropCircleTransformation
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 
@@ -42,11 +44,19 @@ class NetManager private constructor(){
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
     }
+    //动态代理
+    inline fun <reified ApiService> createService(service:Class<ApiService>):ApiService{
+        return retrofitUtil.create<ApiService>()
+    }
     //加载图片
     fun getPhoto(path:String,imageView:ImageView){
         Picasso.get().load(path).into(imageView)
     }
     //加载圆形图片
-    fun getCirclePhoto(){
+    fun getCirclePhoto(path:String,imageView:ImageView){
+        Picasso.get()
+            .load(path)
+            .transform(CropCircleTransformation())
+            .into(imageView)
     }
 }

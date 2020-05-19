@@ -21,6 +21,6 @@ open class MyRequest<RESPONSE>(val type:Int,var url:String, val resPoseHandler: 
     }
     //发送网络请求
     fun execute(){
-        NetManager.manager.sendRequest<RESPONSE>(this)
+        //NetManager.manager.sendRequest<RESPONSE>(this)
     }
 }

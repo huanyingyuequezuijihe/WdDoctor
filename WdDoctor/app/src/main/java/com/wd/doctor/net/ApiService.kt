@@ -1,8 +1,10 @@
 package com.wd.doctor.net
 
 import com.wd.doctor.bean.SendEmailCodeBean
+import io.reactivex.Observable
 import retrofit2.Call
 import retrofit2.http.*
+import java.util.*
 
 /**
  * @author 王阳
@@ -13,7 +15,7 @@ import retrofit2.http.*
  */
 interface ApiService {
     //发送验证码
-    @POST()
+    @POST(ApiUrl.sendEmailCode)
     @FormUrlEncoded
-    fun sendEmailCode(@Url url: String,@Field("email") email:String):Call<SendEmailCodeBean>
+    open fun sendEmailCode(@Field("email") email:String):Observable<SendEmailCodeBean>
 }
