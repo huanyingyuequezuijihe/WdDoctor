@@ -1,32 +1,24 @@
 package com.wd.doctor
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.content.Intent
+import com.wd.doctor.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_q_d.*
 
-class QDActivity : AppCompatActivity() {
-    /*var time=60
-    val handler : Handler = object : Handler(){
-        override fun handleMessage(msg: Message) {
-            super.handleMessage(msg)
-            when(msg.what){
-                3 ->{
-                    var t =msg.data.get("data")
-                }else ->{
+class QDActivity : BaseActivity() {
 
-            }
-            }
-            false
+
+    override fun initLayoutId(): Int {
+        return R.layout.activity_q_d
+    }
+
+    override fun initData() {
+        tv_dao.setOnClickListener {
+            tv_dao.context.startActivity(Intent(tv_dao.context,MainActivity::class.java))
         }
-    }*/
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_q_d)
-        tv_dao.setText("dsadasdas")
-        //tv_dao.isEnabled=false
-
 
     }
 
+    override fun initListener() {
+
+    }
 }

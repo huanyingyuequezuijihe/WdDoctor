@@ -12,7 +12,8 @@ import java.lang.reflect.ParameterizedType
  */
 open class MyRequest<RESPONSE>(val type:Int,var url:String, val resPoseHandler: ResposeHandler<RESPONSE>) {
     fun parseResult(result:String?):RESPONSE{
-        val gson=Gson()
+        val  gson=Gson()
+        //val gson=Gson()
         val type = (this.javaClass
             .genericSuperclass as ParameterizedType).actualTypeArguments[0]
         val list = gson.fromJson<RESPONSE>(result,type)
