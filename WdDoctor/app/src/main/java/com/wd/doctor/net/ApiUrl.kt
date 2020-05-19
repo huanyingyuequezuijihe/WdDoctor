@@ -10,6 +10,7 @@ package com.wd.doctor.net
 class ApiUrl private constructor(){
     //静态
     companion object{
+        val BASE_URL="http://mobile.bwstudent.com/"
         val apiUrl by lazy {ApiUrl()}
     }
     //发送给验证码
