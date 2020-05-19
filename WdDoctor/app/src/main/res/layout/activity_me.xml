@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MeActivity">
+    tools:context=".activity.MeActivity"
+    android:orientation="vertical"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_240"
+        android:background="@mipmap/tree_wy"
+        android:padding="@dimen/dp_20"
+        >
+        <ImageView
+            android:id="@+id/imgBackMe"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+           android:src="@mipmap/common_icon_back_black_n"
+            tools:ignore="MissingConstraints">
+        </ImageView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/img_message_black"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@mipmap/common_nav_message_black_n"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看资料"
+            android:textColor="#94A5FF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_18"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_16"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_3"
+            android:background="@mipmap/common_information_next_n"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/dp_12"
+            >
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

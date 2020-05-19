@@ -55,6 +55,7 @@
             >
         </ImageView>
         <TextView
+            android:id="@+id/tvAskProblem"
             android:layout_width="@dimen/dp_59"
             android:layout_height="@dimen/dp_30"
             android:text="问诊"
@@ -78,6 +79,7 @@
         android:background="@mipmap/promise_bg"
         >
         <TextView
+            android:id="@+id/tvAnswerWy"
             android:layout_width="@dimen/dp_59"
             android:layout_height="@dimen/dp_30"
             android:text="答疑"

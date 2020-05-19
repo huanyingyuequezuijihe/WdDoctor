@@ -1,5 +1,7 @@
 package com.wd.doctor.net
 
+import android.content.Context
+import android.net.ConnectivityManager
 import android.util.Log
 import android.widget.ImageView
 import com.squareup.picasso.Picasso
@@ -58,5 +60,15 @@ class NetManager private constructor(){
             .load(path)
             .transform(CropCircleTransformation())
             .into(imageView)
+    }
+    //网络判断
+    fun net(): Boolean {
+        val connectivityManager:ConnectivityManager= App.instance().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetworkInfo = connectivityManager.activeNetworkInfo
+        if(activeNetworkInfo!=null){
+            val available = activeNetworkInfo.isAvailable
+            return available
+        }
+        return false
     }
 }
