@@ -12,12 +12,11 @@ import android.content.Context
  */
 class App :Application(){
     companion object{
-        private var instance:Application?=null
-        fun instance()= instance!!
+        var context:Context?=null
     }
 
     override fun onCreate() {
         super.onCreate()
-        instance=this
+        context=this
     }
 }

@@ -29,6 +29,9 @@ class NetManager private constructor(){
     companion object{
         val netManager by lazy { NetManager() }
     }
+    /**
+     * 设置头
+     */
     //发送网络请求   get
     private val okHttpClient by lazy {
         OkHttpClient.Builder()
@@ -36,6 +39,15 @@ class NetManager private constructor(){
             .readTimeout(5,TimeUnit.SECONDS)
             .writeTimeout(5,TimeUnit.SECONDS)
             .addInterceptor(httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY))
+            .addInterceptor {
+                chain: Interceptor.Chain ->
+                val originalRequest = chain.request()
+                val requestBuilder = originalRequest.newBuilder()
+                    // Provide your custom header here
+                    .header("", "")
+                val request = requestBuilder.build()
+                chain.proceed(request)
+            }
             .build()
     }
     val retrofitUtil by lazy {
