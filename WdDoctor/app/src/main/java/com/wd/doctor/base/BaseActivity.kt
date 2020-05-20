@@ -31,6 +31,10 @@ abstract class BaseActivity :AppCompatActivity(),AnkoLogger{
     protected open fun myToast(msg:String){
         runOnUiThread { toast(msg) }
     }
+    //跳转   界面
+    inline fun <reified T:BaseActivity> startActivityTo(){
+        startActivity<T>()
+    }
     //跳转   finish当前界面
     inline fun <reified T:BaseActivity> startActivityAndFinish(){
         startActivity<T>()
