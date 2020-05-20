@@ -75,7 +75,7 @@ class NetManager private constructor(){
     }
     //网络判断
     fun net(): Boolean {
-        val connectivityManager:ConnectivityManager= App.instance().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val connectivityManager:ConnectivityManager= App.context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val activeNetworkInfo = connectivityManager.activeNetworkInfo
         if(activeNetworkInfo!=null){
             val available = activeNetworkInfo.isAvailable
