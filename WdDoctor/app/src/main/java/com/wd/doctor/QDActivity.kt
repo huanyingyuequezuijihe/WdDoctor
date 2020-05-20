@@ -6,6 +6,7 @@ import kotlinx.android.synthetic.main.activity_q_d.*
 
 class QDActivity : BaseActivity() {
     //不跟踪提交
+    //不跟踪提交2
 
 
     override fun initLayoutId(): Int {
