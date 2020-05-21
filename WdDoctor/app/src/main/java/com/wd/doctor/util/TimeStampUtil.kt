@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat
  */
 object TimeStampUtil {
     fun transToString(time:Long):String{
-        val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd-hh-MM-ss")
+        val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd hh-MM-ss")
         val format = simpleDateFormat.format(time)
         return format
     }
