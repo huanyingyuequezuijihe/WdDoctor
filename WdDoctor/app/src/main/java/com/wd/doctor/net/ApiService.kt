@@ -1,6 +1,7 @@
 package com.wd.doctor.net
 
 import com.wd.doctor.bean.SendEmailCodeBean
+import com.wd.doctor.bean.wy.FindDoctorByIdBean
 import io.reactivex.Observable
 import retrofit2.Call
 import retrofit2.http.*
@@ -18,4 +19,7 @@ interface ApiService {
     @POST(ApiUrl.sendEmailCode)
     @FormUrlEncoded
     open fun sendEmailCode(@Field("email") email:String):Observable<SendEmailCodeBean>
+    //根据医生id查询医生信息
+    @GET(ApiUrl.findDoctorById)
+    open fun findDoctorById(): Observable<FindDoctorByIdBean>
 }

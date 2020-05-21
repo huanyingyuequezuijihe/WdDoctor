@@ -44,7 +44,8 @@ class NetManager private constructor(){
                 val originalRequest = chain.request()
                 val requestBuilder = originalRequest.newBuilder()
                     // Provide your custom header here
-                    .header("", "")
+                    .header("doctorId", "49")
+                    .header("sessionId", "49159004454016949")
                 val request = requestBuilder.build()
                 chain.proceed(request)
             }

@@ -4,10 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.wd.doctor.R
 import com.wd.doctor.base.BaseActivity
+import com.wd.doctor.bean.wy.FindDoctorByIdBean
+import com.wd.doctor.mvp.wy.presenter.FindDoctorByIdPresenter
+import com.wd.doctor.mvp.wy.presenterImpl.FindDoctorByIdPresenterImpl
+import com.wd.doctor.mvp.wy.view.FindDoctorByIdView
 import com.wd.doctor.net.NetManager
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.item_me.*
 
-class HomeActivity : BaseActivity(){
+class HomeActivity : BaseActivity(),FindDoctorByIdView{
+    val presenter by lazy { FindDoctorByIdPresenterImpl(this) }
     override fun initLayoutId(): Int {
         return R.layout.activity_home
     }
@@ -27,5 +33,27 @@ class HomeActivity : BaseActivity(){
         super.initData()
         val net = NetManager.netManager.net()
         println("======"+net.toString())
+        presenter.onFindDoctorByIdSuccess()
+    }
+
+    override fun onFindDoctorByIdSuccess(response: FindDoctorByIdBean) {
+        //成功
+        println("====="+response.message)
+        val result = response.result
+        //头像
+        NetManager.netManager.getPhoto(result.imagePic,imgUserHeadPic)
+        //名字
+        tvName.setText(result.name)
+        //医院
+        tvHospital.setText(result.inauguralHospital)
+        //医师等级   工作
+        tvDoctor.setText(result.jobTitle)
+        //科室
+        tvDepartment.setText(result.departmentName)
+    }
+
+    override fun onFindDoctorByIdError(msg: String) {
+        //失败
+        println("====="+msg)
     }
 }
