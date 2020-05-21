@@ -1,4 +1,4 @@
-package com.wd.doctor.adapter
+package com.wd.doctor.adapter.wy
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

@@ -1,11 +1,7 @@
 package com.wd.doctor.activity
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import androidx.fragment.app.FragmentPagerAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.wd.doctor.R
-import com.wd.doctor.adapter.FragmentPagerAsk
 import com.wd.doctor.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_ask_problem.*
 

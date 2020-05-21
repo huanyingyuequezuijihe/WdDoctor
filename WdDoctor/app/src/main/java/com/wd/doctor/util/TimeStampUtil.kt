@@ -10,9 +10,9 @@ import java.text.SimpleDateFormat
  * @classname :TimeStampUtil
  * 时间戳
  */
-class TimeStampUtil {
+object TimeStampUtil {
     fun transToString(time:Long):String{
-        val simpleDateFormat = SimpleDateFormat("YY-MM-DD-hh-mm-ss")
+        val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd-hh-MM-ss")
         val format = simpleDateFormat.format(time)
         return format
     }
