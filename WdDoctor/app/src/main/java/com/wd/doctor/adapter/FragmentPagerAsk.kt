@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.wd.doctor.fragment.AskWithin
+import com.wd.doctor.fragment.wy.*
 
 /**
  * @author 王阳
@@ -18,8 +19,21 @@ class FragmentPagerAsk(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         if(position==0){
             return AskWithin()
+        }else if(position==1){
+            return AskEye()
+        }else if(position==2){
+            return AskBone()
+        }else if(position==3){
+            return AskChildren()
+        }else if(position==4){
+            return AskInfectiousDiseases()
+        }else if(position==5){
+            return AskSkin()
+        }else if(position==6){
+            return AskOtolaryngology()
+        }else{
+            return AskMentalDisease()
         }
-        return AskWithin()
     }
 
     override fun getCount(): Int {
