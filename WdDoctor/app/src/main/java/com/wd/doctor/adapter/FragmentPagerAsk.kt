@@ -16,6 +16,9 @@ class FragmentPagerAsk(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     //
     val stringList= listOf<String>("内科","眼科","骨科","小儿科","传染病科","皮肤科","耳鼻喉科","精神病科")
     override fun getItem(position: Int): Fragment {
+        if(position==0){
+            return AskWithin()
+        }
         return AskWithin()
     }
 
