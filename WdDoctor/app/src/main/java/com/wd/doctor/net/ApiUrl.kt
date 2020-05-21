@@ -11,6 +11,10 @@ object ApiUrl{
     const val BASE_URL="http://mobile.bwstudent.com/"
     //发送给验证码
     const val sendEmailCode="health/doctor/v1/sendEmailCode"
+    //申请入驻
     const val applyJoin="health/doctor/v1/applyJoin"
+    //登录
     const val login="health/doctor/v1/login"
+    //根据医生id查询医生信息
+    const val findDoctorById="health/doctor/verify/v1/findDoctorById"
 }
