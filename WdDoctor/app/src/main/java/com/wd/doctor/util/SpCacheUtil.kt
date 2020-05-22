@@ -17,12 +17,10 @@ class SpCacheUtil private constructor(){
     }
     //存储
   open fun saveStringData(key:String,value:String){
-        sp.edit().putString(key, value)
-        sp.edit().commit()
+        sp.edit().putString(key, value).commit()
     }
   open fun saveIntData(key:String,value:Int){
-        sp.edit().putInt(key, value)
-        sp.edit().commit()
+        sp.edit().putInt(key, value).commit()
     }
     //取出
   open fun getStringData(key:String): String? {
@@ -31,6 +29,6 @@ class SpCacheUtil private constructor(){
     }
   open fun getIntData(key:String): Int {
         val aInt = sp.getInt(key, -1)
-        return aInt!!
+        return aInt
     }
 }

@@ -15,14 +15,14 @@ data class LoginBean (
         val id:Int,
         val sessionId:String,
         val name:String,
-        val userName:Int,
-        val reviewStatus:String,
+        val userName:String,
+        val reviewStatus:Int,
         val jiGuangPwd:String,
         val imagePic:String,
         val inauguralHospital:String,
         val jobTitle:String,
         val departmentId:String,
         val departmentName:String,
-        val whetherHaveImagePic:String
+        val whetherHaveImagePic:Int
     )
 }

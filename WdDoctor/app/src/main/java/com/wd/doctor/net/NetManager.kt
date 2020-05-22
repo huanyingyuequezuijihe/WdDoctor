@@ -5,6 +5,7 @@ import android.net.ConnectivityManager
 import android.util.Log
 import android.widget.ImageView
 import com.squareup.picasso.Picasso
+import com.wd.doctor.util.SpCacheUtil
 import com.wd.doctor.util.ThreadUtil
 import jp.wasabeef.picasso.transformations.CropCircleTransformation
 import okhttp3.*
@@ -44,8 +45,16 @@ class NetManager private constructor(){
                 val originalRequest = chain.request()
                 val requestBuilder = originalRequest.newBuilder()
                     // Provide your custom header here
-                    .header("doctorId", "49")
-                    .header("sessionId", "49159013322098849")
+                val doctorId = SpCacheUtil.spCacheUtil.getIntData("doctorId")
+                val sessionId = SpCacheUtil.spCacheUtil.getStringData("sessionId")
+                if (doctorId!=0){
+                    requestBuilder.addHeader("doctorId",doctorId.toString())
+                }
+                if(sessionId!=null){
+                    requestBuilder.addHeader("sessionId",sessionId)
+                }
+                requestBuilder.addHeader("ak","0110010010000")
+                requestBuilder.addHeader("Accept","application/json")
                 val request = requestBuilder.build()
                 chain.proceed(request)
             }
