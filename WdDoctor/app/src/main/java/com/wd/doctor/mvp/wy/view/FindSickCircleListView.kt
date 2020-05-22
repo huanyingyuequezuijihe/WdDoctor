@@ -12,6 +12,8 @@ import com.wd.doctor.bean.wy.FindSickCircleListBean
 interface FindSickCircleListView {
     //成功
     fun onFindSickCircleListViewSuccess(response: FindSickCircleListBean)
+    //刷新成功
+    fun onFindSickCircleListLoadMoreSuccess(response: FindSickCircleListBean)
     //失败
     fun onFindSickCircleListViewError(msg:String)
 }

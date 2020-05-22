@@ -10,7 +10,7 @@ import com.wd.doctor.net.App
  * @date :2020/5/20 16:05
  * @classname :SpCacheUtil
  */
- class SpCacheUtil(){
+class SpCacheUtil private constructor(){
     val sp by lazy { App.context!!.getSharedPreferences("user",Context.MODE_PRIVATE) }
     companion object{
         val spCacheUtil by lazy { SpCacheUtil }

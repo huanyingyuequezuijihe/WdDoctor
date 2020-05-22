@@ -40,16 +40,18 @@ class HomeActivity : BaseActivity(),FindDoctorByIdView{
         //成功
         println("====="+response.message)
         val result = response.result
-        //头像
-        NetManager.netManager.getPhoto(result.imagePic,imgUserHeadPic)
-        //名字
-        tvName.setText(result.name)
-        //医院
-        tvHospital.setText(result.inauguralHospital)
-        //医师等级   工作
-        tvDoctor.setText(result.jobTitle)
-        //科室
-        tvDepartment.setText(result.departmentName)
+        result?.let {
+            //头像
+            NetManager.netManager.getPhoto(result.imagePic,imgUserHeadPic)
+            //名字
+            tvName.setText(result.name)
+            //医院
+            tvHospital.setText(result.inauguralHospital)
+            //医师等级   工作
+            tvDoctor.setText(result.jobTitle)
+            //科室
+            tvDepartment.setText(result.departmentName)
+        }
     }
 
     override fun onFindDoctorByIdError(msg: String) {
