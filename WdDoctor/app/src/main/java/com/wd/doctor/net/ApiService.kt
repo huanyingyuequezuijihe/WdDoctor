@@ -2,6 +2,7 @@ package com.wd.doctor.net
 
 import com.wd.doctor.bean.SendEmailCodeBean
 import com.wd.doctor.bean.wy.FindDoctorByIdBean
+import com.wd.doctor.bean.wy.FindSickCircleInfoBean
 import com.wd.doctor.bean.wy.FindSickCircleListBean
 import io.reactivex.Observable
 import retrofit2.Call
@@ -26,4 +27,7 @@ interface ApiService {
     //病友圈列表展示   根据科室id进行查找
     @GET(ApiUrl.findSickCircleList)
     open fun findSickCircleList(@Query("departmentId") departmentId:Int, @Query("page") page:Int, @Query("count") count:Int):Observable<FindSickCircleListBean>
+    //查询病友圈详情
+    @GET(ApiUrl.findSickCircleInfo)
+    open fun findSickCircleInfo(@Query("sickCircleId") sickCircleId:Int): Observable<FindSickCircleInfoBean>
 }

@@ -16,7 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.SickCircleInfoActivity"></activity>
-        <activity android:name=".activity.SickFriendActivity" />
         <activity android:name=".activity.AnswerActivity" />
         <activity android:name=".activity.AskProblemActivity" />
         <activity android:name=".activity.MeActivity" />

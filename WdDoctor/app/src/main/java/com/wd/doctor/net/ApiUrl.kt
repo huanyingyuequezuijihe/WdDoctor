@@ -19,4 +19,6 @@ object ApiUrl{
     const val findDoctorById="health/doctor/verify/v1/findDoctorById"
     //病友圈列表展示
     const val findSickCircleList="health/doctor/sickCircle/v1/findSickCircleList"
+    //查询病友圈详情
+    const val findSickCircleInfo="health/doctor/sickCircle/v1/findSickCircleInfo"
 }
