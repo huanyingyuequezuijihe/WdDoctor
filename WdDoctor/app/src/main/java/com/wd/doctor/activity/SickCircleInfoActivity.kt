@@ -35,7 +35,7 @@ class SickCircleInfoActivity : BaseActivity(), SickCircleInfoView{
         //成功
         val result = response.result
         //H币
-        tvAmountSickCircle.setText(""+result.amount+"H")
+        tvAmountSickCircle.setText(""+result.amount+" H")
         //姓名
         tvNameSickCircle.setText(result.authorName)
         //病

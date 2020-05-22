@@ -13,6 +13,7 @@ import com.wd.doctor.R
 import com.wd.doctor.activity.SickCircleInfoActivity
 import com.wd.doctor.bean.wy.FindSickCircleListBean
 import com.wd.doctor.util.TimeStampUtil
+import com.wd.doctor.widget.LoadMoreView
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -34,50 +35,70 @@ class RecyclerViewAskWithin : RecyclerView.Adapter<RecyclerViewAskWithin.MyHolde
         this.list = list
         this.context = context
     }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
-        val view = View.inflate(context, R.layout.item_askwithin,null)
-        val myHolder = MyHolder(view)
-        return myHolder
-    }
-    override fun onBindViewHolder(holder: MyHolder, position: Int) {
-        holder.tvTitleAskWithin.setText(list.get(position).title)
-        holder.tvAmountAskWithin.setText(""+list.get(position).amount)
-        holder.tvDetailAskWithin.setText(list.get(position).detail)
-        holder.tvDetailAskWithin.setText(list.get(position).detail)
-        val transToString = TimeStampUtil.transToString(list.get(position).releaseTime)
-        holder.tvTimeAskWithin.setText(transToString)
-        //点击  变色
-        if (isChecked == position) {
-            holder.itemView.setBackgroundColor(Color.GREEN)
-        } else {
-            holder.itemView.setBackgroundColor(Color.WHITE)
-        }
-        //跳转
-        val sickCircleId = list.get(position).sickCircleId
-        holder.itemView.setOnClickListener {
-            isChecked = position
-            notifyDataSetChanged()
-            //第一次点击的时间（上一次）
-            val timeInMillis = Calendar.getInstance().getTimeInMillis();
-            if (timeInMillis - lastOnClickTime > 2000) {
-                val intent = Intent()
-                intent.setClass(context,SickCircleInfoActivity::class.java)
-                val bundle = Bundle()
-                bundle.putInt("sickCircleId",sickCircleId)
-                intent.putExtras(bundle)
-                context.startActivity(intent)
-            }
-        }
-    }
-    override fun getItemCount(): Int {
-        return list.size
-    }
-    class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvTitleAskWithin:TextView=itemView.findViewById(R.id.tvTitleAskWithin)
-        val imgAmountAskWithin:ImageView=itemView.findViewById(R.id.imgAmountAskWithin)
-        val tvAmountAskWithin:TextView=itemView.findViewById(R.id.tvAmountAskWithin)
-        val tvDetailAskWithin:TextView=itemView.findViewById(R.id.tvDetailAskWithin)
-        val tvTimeAskWithin:TextView=itemView.findViewById(R.id.tvTimeAskWithin)
-    }
+/*override fun getItemViewType(position: Int): Int {
+   position==list.size){
+       return 1
+   }else{
+       return 2
+   }
+}*/
+override fun getItemCount(): Int {
+   return list.size
+}
+override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
+   /*if(viewType==1){
+       //最后一条  加载更多
+       val myHolder = MyHolder(LoadMoreView(context))
+       return myHolder
+   }else{
+       val view = View.inflate(context, R.layout.item_askwithin,null)
+       val myHolder = MyHolder(view)
+       return myHolder
+   }*/
+   val view = View.inflate(context, R.layout.item_askwithin,null)
+   val myHolder = MyHolder(view)
+   return myHolder
+}
+override fun onBindViewHolder(holder: MyHolder, position: Int) {
+   //如果是最后一条，就不设置数据了
+  /* if(position==list.size){
+       return
+   }else{*/
+       holder.tvTitleAskWithin.setText(list.get(position).title)
+       holder.tvAmountAskWithin.setText(""+list.get(position).amount)
+       holder.tvDetailAskWithin.setText(list.get(position).detail)
+       holder.tvDetailAskWithin.setText(list.get(position).detail)
+       val transToString = TimeStampUtil.transToString(list.get(position).releaseTime)
+       holder.tvTimeAskWithin.setText(transToString)
+       //点击  变色
+       if (isChecked == position) {
+           holder.itemView.setBackgroundColor(Color.GREEN)
+       } else {
+           holder.itemView.setBackgroundColor(Color.WHITE)
+       }
+       //跳转
+       val sickCircleId = list.get(position).sickCircleId
+       holder.itemView.setOnClickListener {
+           isChecked = position
+           notifyDataSetChanged()
+           //第一次点击的时间（上一次）
+           val timeInMillis = Calendar.getInstance().getTimeInMillis();
+           if (timeInMillis - lastOnClickTime > 2000) {
+               val intent = Intent()
+               intent.setClass(context,SickCircleInfoActivity::class.java)
+               val bundle = Bundle()
+               bundle.putInt("sickCircleId",sickCircleId)
+               intent.putExtras(bundle)
+               context.startActivity(intent)
+           }
+       }
+   //}
+}
+class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+   val tvTitleAskWithin:TextView=itemView.findViewById(R.id.tvTitleAskWithin)
+   val imgAmountAskWithin:ImageView=itemView.findViewById(R.id.imgAmountAskWithin)
+   val tvAmountAskWithin:TextView=itemView.findViewById(R.id.tvAmountAskWithin)
+   val tvDetailAskWithin:TextView=itemView.findViewById(R.id.tvDetailAskWithin)
+   val tvTimeAskWithin:TextView=itemView.findViewById(R.id.tvTimeAskWithin)
+}
 }
