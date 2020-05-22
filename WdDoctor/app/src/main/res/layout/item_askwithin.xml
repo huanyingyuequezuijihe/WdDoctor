@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="@dimen/dp_10"
+    android:background="@drawable/ripple"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,4 +63,10 @@
             android:layout_marginLeft="@dimen/dp_200">
         </TextView>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#8A8A8A"
+        >
+    </View>
 </LinearLayout>
