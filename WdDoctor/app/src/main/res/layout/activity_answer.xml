@@ -43,4 +43,48 @@
             android:src="@mipmap/common_nav_message_black_n"
             ></ImageView>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp_20"
+        >
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabAskWy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tabMode="scrollable"
+            app:tabIndicatorColor="#fff"
+            app:tabSelectedTextColor="#506BFF"
+            app:tabTextColor="#8C8B8B"
+            >
+        </com.google.android.material.tabs.TabLayout>
+        <View
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_25"
+            android:background="#818181"
+            android:layout_gravity="center"
+            >
+        </View>
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@mipmap/common_icon_search_n"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_10"
+            >
+        </ImageView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:background="#878888"
+        >
+    </View>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerAskWy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.viewpager.widget.ViewPager>
 </LinearLayout>

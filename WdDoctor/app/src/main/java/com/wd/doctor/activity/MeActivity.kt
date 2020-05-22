@@ -1,10 +1,8 @@
 package com.wd.doctor.activity
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import com.wd.doctor.R
-import com.wd.doctor.adapter.RecyclerViewMe
+import com.wd.doctor.adapter.wy.RecyclerViewMe
 import com.wd.doctor.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_me.*
 
