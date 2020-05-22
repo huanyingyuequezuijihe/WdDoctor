@@ -19,19 +19,19 @@
         <activity android:name=".activity.AnswerActivity" />
         <activity android:name=".activity.AskProblemActivity" />
         <activity android:name=".activity.MeActivity" />
-        <activity android:name=".activity.HomeActivity">
+        <activity android:name=".QDActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QDActivity" />
+        <activity android:name=".activity.HomeActivity" />
         <activity android:name=".loginactivity.RuzhuOneActivity" />
         <activity android:name=".loginactivity.RuzhuTwoActivity" />
         <activity android:name=".loginactivity.RuzhuThreeActivity" />
         <activity android:name=".loginactivity.LoginActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

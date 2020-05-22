@@ -7,83 +7,89 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/ruzhu_wanshan"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/dp_30"
-        android:gravity="center"
         android:layout_marginTop="@dimen/dp_74"
-        android:textSize="16sp"
-        android:textColor="#3087ea"
+        android:gravity="center"
         android:text="完善信息"
-        android:id="@+id/ruzhu_wanshan"/>
+        android:textColor="#3087ea"
+        android:textSize="16sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="@dimen/dp_30"
         android:gravity="center"
-        android:textSize="16sp"
+        android:text="审核通过即可成功入驻"
         android:textColor="#3087ea"
-        android:text="审核通过即可成功入驻"/>
+        android:textSize="16sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="10sp"
+        android:text="填写正确信息有助于快速通过审核"
         android:textColor="#d92109"
-        android:text="填写正确信息有助于快速通过审核"/>
+        android:textSize="10sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_30"
         android:gravity="center"
-        android:textSize="14sp"
+        android:text="您的真实姓名"
         android:textColor="#666666"
-        android:text="您的真实姓名"/>
+        android:textSize="14sp" />
+
     <EditText
         android:id="@+id/ruzhu_ed_name"
-        android:layout_marginTop="@dimen/dp_10"
         android:layout_width="@dimen/dp_300"
         android:layout_height="@dimen/dp_40"
-        android:background="@color/ruzhu_ed"/>
+        android:layout_marginTop="@dimen/dp_10" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_30"
         android:gravity="center"
-        android:textSize="14sp"
+        android:text="您所在医院"
         android:textColor="#666666"
-        android:text="您所在医院"/>
+        android:textSize="14sp" />
+
     <EditText
         android:id="@+id/ruzhu_ed_yiyuan"
-        android:layout_marginTop="@dimen/dp_10"
         android:layout_width="@dimen/dp_300"
-        android:layout_height="@dimen/dp_40"/>
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_30"
         android:gravity="center"
-        android:textSize="14sp"
+        android:text="您所在科室"
         android:textColor="#666666"
-        android:text="您所在科室"/>
-    <EditText
-        android:id="@+id/ruzhu_ed_keshi"
-        android:layout_marginTop="@dimen/dp_10"
+        android:textSize="14sp" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/keshi_nice_spinner"
         android:layout_width="@dimen/dp_300"
-        android:hint="儿科"
-        android:layout_height="@dimen/dp_40"/>
+        android:layout_height="@dimen/dp_40" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_30"
         android:gravity="center"
-        android:textSize="14sp"
+        android:text="您的职称"
         android:textColor="#666666"
-        android:text="您的职称"/>
-    <EditText
-        android:id="@+id/ruzhu_ed_zhicheng"
-        android:layout_marginTop="@dimen/dp_10"
+        android:textSize="14sp" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/zhicheng_nice_spinner"
         android:layout_width="@dimen/dp_300"
-        android:hint="主治医师"
-        android:layout_height="@dimen/dp_40"/>
+        android:layout_height="@dimen/dp_40" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
