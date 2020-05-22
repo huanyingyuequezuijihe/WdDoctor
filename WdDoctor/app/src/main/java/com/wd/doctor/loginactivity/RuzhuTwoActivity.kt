@@ -2,6 +2,7 @@ package com.wd.doctor.loginactivity
 
 import com.wd.doctor.R
 import com.wd.doctor.base.BaseActivity
+import kotlinx.android.synthetic.main.activity_ruzhutwo_activity.*
 
 class RuzhuTwoActivity : BaseActivity() {
 
@@ -16,6 +17,9 @@ class RuzhuTwoActivity : BaseActivity() {
     }
 
     override fun initListener() {
+        ruzhu_btn_xia2.setOnClickListener {
+            startActivityAndFinish<RuzhuThreeActivity>()
+        }
 
     }
 }

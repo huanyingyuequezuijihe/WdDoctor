@@ -8,6 +8,11 @@ package com.wd.doctor.net
  * @classname :ApiUrl
  */
 object ApiUrl{
+    //注册
+    const val user_register = "health/user/v1/register"
+    //登录
+    const val user_login = "health/doctor/v1/login"
+
     const val BASE_URL="http://mobile.bwstudent.com/"
     //发送给验证码
     const val sendEmailCode="health/doctor/v1/sendEmailCode"

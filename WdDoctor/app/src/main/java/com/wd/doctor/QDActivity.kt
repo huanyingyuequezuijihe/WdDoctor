@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Handler
 import com.wd.doctor.activity.HomeActivity
 import com.wd.doctor.base.BaseActivity
+import com.wd.doctor.loginactivity.LoginActivity
 import kotlinx.android.synthetic.main.activity_q_d.*
 
 class QDActivity : BaseActivity() {
@@ -20,8 +21,7 @@ class QDActivity : BaseActivity() {
             if (mCountNum > 0) {
                 handler.postDelayed(this, 1000)
             } else {
-                startActivity(Intent(tv_dao.context,HomeActivity::class.java))
-                finish()
+                startActivityAndFinish<LoginActivity>()
             }
             mCountNum--
         }
@@ -37,8 +37,7 @@ class QDActivity : BaseActivity() {
 
     override fun initListener() {
         tv_dao.setOnClickListener {
-            startActivity(Intent(tv_dao.context,HomeActivity::class.java))
-            finish()
+            startActivityAndFinish<LoginActivity>()
         }
     }
 }

@@ -19,7 +19,7 @@
         <activity android:name=".activity.AnswerActivity" />
         <activity android:name=".activity.AskProblemActivity" />
         <activity android:name=".activity.MeActivity" />
-        <activity android:name=".QDActivity">
+        <activity android:name=".loginactivity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,7 +30,7 @@
         <activity android:name=".loginactivity.RuzhuOneActivity" />
         <activity android:name=".loginactivity.RuzhuTwoActivity" />
         <activity android:name=".loginactivity.RuzhuThreeActivity" />
-        <activity android:name=".loginactivity.LoginActivity" />
+        <activity android:name=".QDActivity" />
         <activity android:name=".MainActivity"></activity>
     </application>
 
