@@ -41,7 +41,7 @@ class LoginActivity : BaseActivity(),CsView {
 
     override fun onLoginSuccess(response: LoginBean) {
         println("Login"+response.message)
-        //startActivityAndFinish<HomeActivity>()
+        startActivityAndFinish<HomeActivity>()
 
 
     }
