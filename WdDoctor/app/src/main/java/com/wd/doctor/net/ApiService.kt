@@ -1,6 +1,7 @@
 package com.wd.doctor.net
 
 import com.wd.doctor.bean.SendEmailCodeBean
+import com.wd.doctor.bean.cs.LoginBean
 import com.wd.doctor.bean.wy.FindDoctorByIdBean
 import com.wd.doctor.bean.wy.FindSickCircleListBean
 import io.reactivex.Observable
@@ -16,6 +17,13 @@ import java.util.*
  * @classname :ApiService
  */
 interface ApiService {
+
+
+    @POST(ApiUrl.user_login)
+    @FormUrlEncoded
+    open fun  getLogin(@Field("email") email: String, @Field("pwd") pwd:String):Observable<LoginBean>
+
+
     //发送验证码
     @POST(ApiUrl.sendEmailCode)
     @FormUrlEncoded
