@@ -13,7 +13,7 @@ import com.wd.doctor.net.App
 class SpCacheUtil private constructor(){
     val sp by lazy { App.context!!.getSharedPreferences("user",Context.MODE_PRIVATE) }
     companion object{
-        val spCacheUtil by lazy { SpCacheUtil }
+        val spCacheUtil by lazy { SpCacheUtil() }
     }
     //存储
   open fun saveStringData(key:String,value:String){

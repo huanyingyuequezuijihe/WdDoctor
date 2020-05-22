@@ -20,14 +20,14 @@
         <activity android:name=".activity.AskProblemActivity" />
         <activity android:name=".activity.MeActivity" />
         <activity android:name=".loginactivity.LoginActivity">
-
-        </activity>
-        <activity android:name=".activity.HomeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activity.HomeActivity" >
+
         </activity>
         <activity android:name=".loginactivity.RuzhuOneActivity" />
         <activity android:name=".loginactivity.RuzhuTwoActivity" />

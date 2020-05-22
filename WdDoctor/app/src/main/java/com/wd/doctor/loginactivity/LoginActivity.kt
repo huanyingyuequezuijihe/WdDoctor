@@ -13,7 +13,6 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity(),CsLoginView {
     val presenter by lazy { CsLoginLoginModel (this) }
-    val sp by lazy { SpCacheUtil()  }
     var em:String =""
     var pwd:String =""
 
@@ -23,11 +22,10 @@ class LoginActivity : BaseActivity(),CsLoginView {
     }
 
     override fun initData() {
-
-        var userEmail=sp.getStringData("userEmail")
+        var userEmail=SpCacheUtil.spCacheUtil.getStringData("userEmail")
        // println("dddddddd"+aa)
         userEmail?.let {
-            var userPwd= sp.getStringData("userPwd")
+            var userPwd= SpCacheUtil.spCacheUtil.getStringData("userPwd")
             userPwd?.let {
                 login_em.setText(userEmail)
                 login_pwd.setText(userPwd)
@@ -70,14 +68,14 @@ class LoginActivity : BaseActivity(),CsLoginView {
     override fun onLoginSuccess(response: LoginBean) {
         println("Login"+response.message)
 
-        sp.saveStringData("userEmail",em)
-        sp.saveStringData("userPwd",pwd)
+        SpCacheUtil.spCacheUtil.saveStringData("userEmail",em)
+        SpCacheUtil.spCacheUtil.saveStringData("userPwd",pwd)
 
         val dovtorId=response.result.id.toString()
-        sp.saveStringData("dovtorId",dovtorId)
+        SpCacheUtil.spCacheUtil.saveStringData("dovtorId",dovtorId)
 
         val sessionId=response.result.sessionId
-        sp.saveStringData("sessionId",sessionId)
+        SpCacheUtil.spCacheUtil.saveStringData("sessionId",sessionId)
 
         startActivityAndFinish<HomeActivity>()
 
