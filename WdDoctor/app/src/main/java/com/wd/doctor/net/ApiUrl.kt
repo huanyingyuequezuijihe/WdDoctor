@@ -9,7 +9,7 @@ package com.wd.doctor.net
  */
 object ApiUrl{
     //注册
-    const val user_register = "health/user/v1/register"
+    const val user_register = "health/doctor/v1/applyJoin"
     //登录
     const val user_login = "health/doctor/v1/login"
 

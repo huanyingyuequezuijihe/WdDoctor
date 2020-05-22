@@ -1,6 +1,6 @@
 package com.wd.doctor.mvp.cs.cspresenter
 
-interface CsPresenter {
+interface CsLoginPresenter {
     //成功
     fun onLoginSuccess(email:String,pwd:String)
     //失败

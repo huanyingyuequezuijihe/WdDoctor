@@ -19,7 +19,27 @@ import java.util.*
  */
 interface ApiService {
 
+    //注册
+    @POST(ApiUrl.user_register)
+    @FormUrlEncoded
+    open fun getRegister(@Field("email") email: String,
+    @Field("code") count: String,
+    @Field("pwd1") pwd1:String,
+    @Field("pwd2") pwd2:String,
+    @Field("name") name:String,
+    @Field("inauguralHospital") inauguralHospital:String,
+    @Field("departmentId") departmentId:String,
+    @Field("jobTitleId") jobTitleId:String,
+    @Field("personalProfile") personalProfile:String,
+    @Field("goodField") goodField:String
+    ):Observable<LoginBean>
+    //查询科室
+   // @GET("mobile.bwstudent.com/health/share/knowledgeBase/v1/findDepartment")
+    //@FormUrlEncoded
+    //open fun getkeshi() :Observable<>
 
+
+    //登录
     @POST(ApiUrl.user_login)
     @FormUrlEncoded
     open fun  getLogin(@Field("email") email: String, @Field("pwd") pwd:String):Observable<LoginBean>
