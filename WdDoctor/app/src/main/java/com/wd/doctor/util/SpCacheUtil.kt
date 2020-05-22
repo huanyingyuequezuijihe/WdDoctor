@@ -13,16 +13,14 @@ import com.wd.doctor.net.App
 class SpCacheUtil private constructor(){
     val sp by lazy { App.context!!.getSharedPreferences("user",Context.MODE_PRIVATE) }
     companion object{
-        val spCacheUtil by lazy { SpCacheUtil }
+        val spCacheUtil by lazy { SpCacheUtil() }
     }
     //存储
-    fun saveStringData(key:String,value:String){
-        sp.edit().putString(key, value)
-        sp.edit().commit()
+    open fun saveStringData(key:String,value:String){
+        sp.edit().putString(key, value).commit()
     }
-    fun saveIntData(key:String,value:Int){
-        sp.edit().putInt(key, value)
-        sp.edit().commit()
+    open fun saveIntData(key:String,value:Int){
+        sp.edit().putInt(key, value).commit()
     }
     //取出
     fun getStringData(key:String): String? {
