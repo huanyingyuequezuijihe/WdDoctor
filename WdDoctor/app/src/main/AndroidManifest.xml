@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SickFriendActivity"></activity>
+        <activity android:name=".activity.SickCircleInfoActivity"></activity>
+        <activity android:name=".activity.SickFriendActivity" />
         <activity android:name=".activity.AnswerActivity" />
         <activity android:name=".activity.AskProblemActivity" />
         <activity android:name=".activity.MeActivity" />
@@ -31,7 +32,7 @@
         <activity android:name=".loginactivity.RuzhuTwoActivity" />
         <activity android:name=".loginactivity.RuzhuThreeActivity" />
         <activity android:name=".loginactivity.LoginActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

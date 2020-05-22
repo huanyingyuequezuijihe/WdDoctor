@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_askwithin.*
  * @classname :AskWithin
  * 内科
  */
-class AskWithin :BaseFragment(), FindSickCircleListView{
+class AskWithin(val departmentId:Int) :BaseFragment(), FindSickCircleListView{
     val presenter by lazy { FindSickCircleListPresenterImpl(this) }
     override fun initView(): View? {
         val view = View.inflate(context, R.layout.fragment_askwithin, null)
@@ -41,13 +41,13 @@ class AskWithin :BaseFragment(), FindSickCircleListView{
         super.initData()
         /*val linearLayoutManager = LinearLayoutManager(context!!)
         recyclerAsk.layoutManager=linearLayoutManager*/
-        presenter.onFindSickCircleListSuccess(7,1,10)
+        presenter.onFindSickCircleListSuccess(departmentId,1,10)
     }
     override fun onFindSickCircleListViewSuccess(response: FindSickCircleListBean) {
         //成功
         val result = response.result
         //适配器
-        val recyclerViewAskWithin = RecyclerViewAskWithin(result, context)
+        val recyclerViewAskWithin = context?.let { RecyclerViewAskWithin(result, it) }
         recyclerAskWithin.adapter=recyclerViewAskWithin
     }
 

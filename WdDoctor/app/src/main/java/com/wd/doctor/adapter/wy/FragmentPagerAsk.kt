@@ -17,22 +17,30 @@ class FragmentPagerAsk(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     //
     val stringList= listOf<String>("内科","眼科","骨科","小儿科","传染病科","皮肤科","耳鼻喉科","精神病科")
     override fun getItem(position: Int): Fragment {
+        var departmentId:Int
         if(position==0){
-            return AskWithin()
+            return AskWithin(departmentId=7)
         }else if(position==1){
-            return AskEye()
+            return AskWithin(departmentId=4)
+            //return AskEye()
         }else if(position==2){
-            return AskBone()
+            return AskWithin(departmentId=2)
+            //return AskBone()
         }else if(position==3){
-            return AskChildren()
+            return AskWithin(departmentId=5)
+            //return AskChildren()
         }else if(position==4){
-            return AskInfectiousDiseases()
+            return AskWithin(departmentId=12)
+            //return AskInfectiousDiseases()
         }else if(position==5){
-            return AskSkin()
+            return AskWithin(departmentId=9)
+            //return AskSkin()
         }else if(position==6){
-            return AskOtolaryngology()
+            return AskWithin(departmentId=6)
+            //return AskOtolaryngology()
         }else{
-            return AskMentalDisease()
+            return AskWithin(departmentId=11)
+            //return AskMentalDisease()
         }
     }
 
