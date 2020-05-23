@@ -13,7 +13,7 @@ class QDActivity : BaseActivity() {
     //不跟踪提交2
 
     private val handler= Handler()
-    private var mCountNum=5
+    private var mCountNum=3
     private val countDown = object : Runnable{
         override fun run() {
             tv_dao.text = "${mCountNum}秒 立即跳转"
