@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,191 +7,227 @@
     android:layout_height="match_parent"
     tools:context=".activity.SickCircleInfoActivity"
     android:orientation="vertical"
+    android:background="#8C8C8C"
+    android:alpha="0.9"
+    android:id="@+id/constraintBg"
     >
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/tishi"
+        android:layout_width="@dimen/dp_140"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="@dimen/dp_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/know"
+        android:src="@mipmap/copywriting"
+        android:layout_marginLeft="@dimen/dp_100"
         >
-        <ImageView
-            android:id="@+id/imgBackSickCircle"
-            android:layout_width="@dimen/dp_16"
-            android:layout_height="@dimen/dp_16"
-            android:src="@mipmap/common_icon_back_black_n"
-            >
-        </ImageView>
-        <TextView
-            android:id="@+id/tvBackSickCircle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="治疗方法"
-            android:textSize="@dimen/sp_20"
-            >
-        </TextView>
-    </LinearLayout>
+    </ImageView>
+    <ImageView
+        android:id="@+id/know"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/arrow"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/arrow"
+        android:layout_marginTop="@dimen/dp_3"
+        android:src="@mipmap/know"
+        >
+    </ImageView>
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="76dp"
+        android:layout_height="349dp"
+        android:layout_marginTop="@dimen/dp_320"
+        android:layout_marginRight="@dimen/dp_45"
+        android:src="@mipmap/arrow"
+        app:layout_constraintBottom_toTopOf="@id/selsct"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout">
+    </ImageView>
+    <ImageView
+        android:id="@+id/selsct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/selsct"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="@dimen/dp_90"
+        >
+    </ImageView>
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="@dimen/dp_10"
-        >
-        <TextView
-            android:id="@+id/tvNameSickCircle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_16"
-            android:textColor="#3087ea"
-            android:text="姓名"
-            >
-        </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_12"
-            android:textColor="#3087ea"
-            android:text="[病症]"
-            android:layout_marginTop="@dimen/dp_10"
-            >
-        </TextView>
-        <TextView
-            android:id="@+id/tvIllnessSickCircle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_12"
-            android:textColor="#000000"
-            android:text="神经精神病"
-            android:layout_marginTop="@dimen/dp_10"
-            >
-        </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_12"
-            android:textColor="#3087ea"
-            android:text="[科室]"
-            android:layout_marginTop="@dimen/dp_10"
-            >
-        </TextView>
-        <TextView
-            android:id="@+id/tvSectionSickCircle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_12"
-            android:textColor="#000000"
-            android:text="内科"
-            android:layout_marginTop="@dimen/dp_10"
-            >
-        </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_12"
-            android:textColor="#3087ea"
-            android:text="[病症详情]"
-            android:layout_marginTop="@dimen/dp_20"
-            >
-        </TextView>
-        <TextView
-            android:id="@+id/tvDetailsSickCircle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_12"
-            android:textColor="#000000"
-            android:text="详情"
-            android:layout_marginTop="@dimen/dp_10"
-            >
-        </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_12"
-            android:textColor="#3087ea"
-            android:text="[治疗经历]"
-            android:layout_marginTop="@dimen/dp_20"
-            >
-        </TextView>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            >
+            android:padding="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/imgBackSickCircle"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/common_icon_back_black_n"></ImageView>
+
             <TextView
-                android:id="@+id/tvHospitalSickCircle"
-                android:layout_width="0dp"
+                android:id="@+id/tvBackSickCircle"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="@dimen/sp_12"
-                android:textColor="#000000"
-                android:text="医院"
-                android:layout_marginTop="@dimen/dp_10"
-                >
-            </TextView>
+                android:gravity="center"
+                android:text="治疗方法"
+                android:textSize="@dimen/sp_20"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
             <TextView
-                android:id="@+id/tvTimeSickCircle"
+                android:id="@+id/tvNameSickCircle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                android:textColor="#3087ea"
+                android:textSize="@dimen/sp_16"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="[病症]"
+                android:textColor="#3087ea"
+                android:textSize="@dimen/sp_12"></TextView>
+
+            <TextView
+                android:id="@+id/tvIllnessSickCircle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="神经精神病"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_12"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="[科室]"
+                android:textColor="#3087ea"
+                android:textSize="@dimen/sp_12"></TextView>
+
+            <TextView
+                android:id="@+id/tvSectionSickCircle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="内科"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_12"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="[病症详情]"
+                android:textColor="#3087ea"
+                android:textSize="@dimen/sp_12"></TextView>
+
+            <TextView
+                android:id="@+id/tvDetailsSickCircle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="详情"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_12"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="[治疗经历]"
+                android:textColor="#3087ea"
+                android:textSize="@dimen/sp_12"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvHospitalSickCircle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:text="医院"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/sp_12"></TextView>
+
+                <TextView
+                    android:id="@+id/tvTimeSickCircle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="治疗的时间"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/sp_12"></TextView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvExperienceSickCircle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="治疗的经历"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_12"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="[相关图片]"
+                android:textColor="#3087ea"
+                android:textSize="@dimen/sp_12"></TextView>
+
+            <ImageView
+                android:id="@+id/imgPhotoSickCircle"
+                android:layout_width="@dimen/dp_320"
+                android:layout_height="@dimen/dp_144"
+                android:layout_marginTop="@dimen/dp_10"
+                android:scaleType="fitXY"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAmountSickCircle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="30H币"
+                android:textColor="#BA0D00"></TextView>
+
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_12"
-                android:textColor="#000000"
-                android:text="治疗的时间"
-                android:layout_marginTop="@dimen/dp_10"
-                >
-            </TextView>
+                android:background="#4759BF"
+                android:text="我来解答"
+                android:textColor="#fff"></Button>
         </LinearLayout>
-        <TextView
-            android:id="@+id/tvExperienceSickCircle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_12"
-            android:textColor="#000000"
-            android:text="治疗的经历"
-            android:layout_marginTop="@dimen/dp_10"
-            >
-        </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/sp_12"
-            android:textColor="#3087ea"
-            android:text="[相关图片]"
-            android:layout_marginTop="@dimen/dp_20"
-            >
-        </TextView>
-        <ImageView
-            android:id="@+id/imgPhotoSickCircle"
-            android:layout_width="@dimen/dp_320"
-            android:layout_height="@dimen/dp_144"
-            android:layout_marginTop="@dimen/dp_10"
-            android:src="@mipmap/ic_launcher_round"
-            android:scaleType="fitXY"
-            >
-        </ImageView>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:id="@+id/tvAmountSickCircle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="30H币"
-            android:textColor="#BA0D00"
-            android:gravity="center"
-            android:background="#fff"
-            >
-        </TextView>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#4759BF"
-            android:text="我来解答"
-            android:textColor="#fff"
-            >
-        </Button>
-    </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

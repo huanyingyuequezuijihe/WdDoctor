@@ -1,7 +1,9 @@
 package com.wd.doctor.activity
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.wd.doctor.R
 import com.wd.doctor.base.BaseActivity
 import com.wd.doctor.bean.wy.FindSickCircleInfoBean
@@ -21,6 +23,15 @@ class SickCircleInfoActivity : BaseActivity(), SickCircleInfoView{
         super.initListener()
         imgBackSickCircle.setOnClickListener {
             finish()
+        }
+        know.setOnClickListener {
+            know.visibility= View.GONE
+            tishi.visibility= View.GONE
+            arrow.visibility= View.GONE
+            selsct.visibility= View.GONE
+            constraintBg.setBackgroundColor(Color.WHITE)
+            tvAmountSickCircle.setBackgroundColor(Color.WHITE)
+            imgPhotoSickCircle.visibility= View.VISIBLE
         }
     }
 
