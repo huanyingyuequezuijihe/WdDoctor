@@ -5,6 +5,7 @@ import com.wd.doctor.bean.cs.LoginBean
 import com.wd.doctor.bean.wy.FindDoctorByIdBean
 import com.wd.doctor.bean.wy.FindSickCircleInfoBean
 import com.wd.doctor.bean.wy.FindSickCircleListBean
+import com.wd.doctor.bean.wy.SearchSickCircleBean
 import io.reactivex.Observable
 import retrofit2.Call
 import retrofit2.http.*
@@ -58,4 +59,7 @@ interface ApiService {
     //查询病友圈详情
     @GET(ApiUrl.findSickCircleInfo)
     open fun findSickCircleInfo(@Query("sickCircleId") sickCircleId:Int): Observable<FindSickCircleInfoBean>
+    //根据关键词查询病友圈
+    @GET(ApiUrl.searchSickCircle)
+    open fun searchSickCircledata(@Query ("keyWord") keyWord :String ):Observable<SearchSickCircleBean>
 }

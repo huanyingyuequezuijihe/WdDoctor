@@ -68,6 +68,7 @@
             >
         </View>
         <ImageView
+            android:id="@+id/imgSearchCircle"
             android:layout_width="@dimen/dp_20"
             android:layout_height="@dimen/dp_20"
             android:src="@mipmap/common_icon_search_n"

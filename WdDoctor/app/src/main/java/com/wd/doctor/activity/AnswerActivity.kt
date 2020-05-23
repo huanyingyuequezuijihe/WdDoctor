@@ -15,6 +15,9 @@ class AnswerActivity : BaseActivity() {
         imgBackAnswer.setOnClickListener {
             finish()
         }
+        imgSearchCircle.setOnClickListener {
+            startActivityTo<SearchActivity>()
+        }
     }
 
     override fun initData() {

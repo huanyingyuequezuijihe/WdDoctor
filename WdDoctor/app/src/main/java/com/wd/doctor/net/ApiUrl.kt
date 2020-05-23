@@ -12,7 +12,7 @@ object ApiUrl{
     const val user_register = "health/doctor/v1/applyJoin"
     //登录
     const val user_login = "health/doctor/v1/login"
-
+    //根路径
     const val BASE_URL="http://mobile.bwstudent.com/"
     //发送给验证码
     const val sendEmailCode="health/doctor/v1/sendEmailCode"
@@ -26,4 +26,6 @@ object ApiUrl{
     const val findSickCircleList="health/doctor/sickCircle/v1/findSickCircleList"
     //查询病友圈详情
     const val findSickCircleInfo="health/doctor/sickCircle/v1/findSickCircleInfo"
+    //根据关键词查询病友圈
+    const val searchSickCircle="health/doctor/sickCircle/v1/searchSickCircle"
 }

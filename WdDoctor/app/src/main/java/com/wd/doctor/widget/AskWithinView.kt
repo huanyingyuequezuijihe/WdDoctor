@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.util.AttributeSet
 import android.view.View
 import android.widget.RelativeLayout
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
 import com.wd.doctor.R
 import com.wd.doctor.activity.SickCircleInfoActivity
 import com.wd.doctor.adapter.wy.RecyclerViewAskWithin
@@ -38,7 +40,13 @@ class AskWithinView: RelativeLayout{
     //刷新条目 view的数据
     fun setData(list: FindSickCircleListBean.Result) {
         tvTitleAskWithin.setText(list.title)
-        tvAmountAskWithin.setText(list.amount.toString())
+        if(list.amount!=0){
+            imgAmountAskWithin.isVisible=true
+            tvAmountAskWithin.setText(list.amount.toString())
+        }else{
+            imgAmountAskWithin.isGone=true
+            tvAmountAskWithin.setText("")
+        }
         tvDetailAskWithin.setText(list.detail)
         tvDetailAskWithin.setText(list.detail)
         val transToString = TimeStampUtil.transToString(list.releaseTime)
