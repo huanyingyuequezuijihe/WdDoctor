@@ -16,6 +16,9 @@ class MeActivity :BaseActivity() {
         imgBackMe.setOnClickListener {
             finish()
         }
+        tvPersonalMe.setOnClickListener {
+            startActivityTo<PersonalActivity>()
+        }
     }
 
     override fun initData() {
