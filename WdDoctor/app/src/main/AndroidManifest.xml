@@ -15,19 +15,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.PersonalActivity"></activity>
+        <activity android:name=".activity.MessageActivity"></activity>
+        <activity android:name=".activity.PersonalActivity" />
         <activity android:name=".activity.SickCircleInfoActivity" />
         <activity android:name=".activity.AnswerActivity" />
         <activity android:name=".activity.AskProblemActivity" />
         <activity android:name=".activity.MeActivity" />
-        <activity android:name=".loginactivity.LoginActivity">
-
-        </activity>
-        <activity android:name=".activity.HomeActivity"></activity>
+        <activity android:name=".loginactivity.LoginActivity"></activity>
+        <activity android:name=".activity.HomeActivity" />
         <activity android:name=".loginactivity.RuzhuOneActivity" />
         <activity android:name=".loginactivity.RuzhuTwoActivity" />
         <activity android:name=".loginactivity.RuzhuThreeActivity" />
-        <activity android:name=".QDActivity" >
+        <activity android:name=".QDActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

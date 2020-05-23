@@ -28,6 +28,9 @@ class HomeActivity : BaseActivity(),FindDoctorByIdView{
         tvAdministrationWy.setOnClickListener {
             startActivityTo<MeActivity>()
         }
+        img_message_black.setOnClickListener {
+            startActivityTo<MessageActivity>()
+        }
     }
     override fun initData() {
         super.initData()
