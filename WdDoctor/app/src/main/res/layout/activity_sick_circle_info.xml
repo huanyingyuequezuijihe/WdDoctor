@@ -210,8 +210,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
+            android:orientation="horizontal"
+            android:id="@+id/lieanrAsk"
+            >
             <TextView
                 android:id="@+id/tvAmountSickCircle"
                 android:layout_width="0dp"
@@ -230,5 +231,32 @@
                 android:text="我来解答"
                 android:textColor="#fff"></Button>
         </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/dp_30"
+        android:id="@+id/linearDialog"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="我的解答"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textSize="16sp"
+            android:textColor="#4fcb9f"
+            ></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/csend_content"
+            android:background="@drawable/edit_bgkuang"
+            android:layout_margin="@dimen/dp_10"
+            android:padding="@dimen/dp_10"
+            ></TextView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
