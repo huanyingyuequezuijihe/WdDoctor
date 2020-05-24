@@ -63,16 +63,17 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerSearchCircle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
         android:overScrollMode="never"
+        android:visibility="visible"
         ></androidx.recyclerview.widget.RecyclerView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:id="@+id/wuxx"
+        android:id="@+id/linearNo"
         android:visibility="gone"
         >
         <ImageView
@@ -83,12 +84,12 @@
             android:src="@mipmap/no_search_message"
             ></ImageView>
         <TextView
+            android:id="@+id/tvNoSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="13sp"
             android:textColor="#333"
-            android:id="@+id/wuxxcon"
             android:layout_marginTop="@dimen/dp_40"
             android:text="没有找到“关键字”的相关病友圈"
             ></TextView>

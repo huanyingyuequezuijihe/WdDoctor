@@ -28,4 +28,6 @@ object ApiUrl{
     const val findSickCircleInfo="health/doctor/sickCircle/v1/findSickCircleInfo"
     //根据关键词查询病友圈
     const val searchSickCircle="health/doctor/sickCircle/v1/searchSickCircle"
+    //解答  发表评论
+    const val publishComment="health/doctor/sickCircle/verify/v1/publishComment"
 }

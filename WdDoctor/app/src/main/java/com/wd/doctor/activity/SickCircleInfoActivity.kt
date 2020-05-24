@@ -13,7 +13,7 @@ import com.wd.doctor.net.NetManager
 import com.wd.doctor.util.TimeStampUtil
 import kotlinx.android.synthetic.main.activity_sick_circle_info.*
 
-//病友圈详情
+//病友圈详情   透明遮盖
 class SickCircleInfoActivity : BaseActivity(), SickCircleInfoView{
     val presenter by lazy { SickCircleInfoPresenterImpl(this) }
     override fun initLayoutId(): Int {
@@ -24,6 +24,7 @@ class SickCircleInfoActivity : BaseActivity(), SickCircleInfoView{
         imgBackSickCircle.setOnClickListener {
             finish()
         }
+        //点击  隐藏
         know.setOnClickListener {
             know.visibility= View.GONE
             tishi.visibility= View.GONE
@@ -32,6 +33,9 @@ class SickCircleInfoActivity : BaseActivity(), SickCircleInfoView{
             constraintBg.setBackgroundColor(Color.WHITE)
             tvAmountSickCircle.setBackgroundColor(Color.WHITE)
             imgPhotoSickCircle.visibility= View.VISIBLE
+        }
+        //点击  解答
+        btnAskCircle.setOnClickListener {
         }
     }
 

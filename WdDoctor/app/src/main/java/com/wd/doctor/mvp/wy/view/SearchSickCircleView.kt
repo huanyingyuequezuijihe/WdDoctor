@@ -11,7 +11,7 @@ import com.wd.doctor.bean.wy.SearchSickCircleBean
  */
 interface SearchSickCircleView {
     //成功
-    fun onSearchSickCircleSucess(reponse: SearchSickCircleBean)
+    fun onSearchSickCircleSuccess(response: SearchSickCircleBean)
     //失败
     fun onSearchSickCircleError(message: String?)
 }

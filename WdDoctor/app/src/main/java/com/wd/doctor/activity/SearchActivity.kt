@@ -25,20 +25,22 @@ class SearchActivity : BaseActivity(), SearchSickCircleView {
         }
         recyclerSearchCircle.layoutManager= LinearLayoutManager(this)
         btn_ss.setOnClickListener {
-            val etSsContent = etSsContent.text.toString()
-            presenter.onSearchSickCircleDatas(etSsContent!!)
+            val etSContent = etSsContent.text.toString()
+            presenter.onSearchSickCircleDatas(etSContent)
         }
     }
     override fun initData() {
         super.initData()
     }
-    override fun onSearchSickCircleSucess(reponse: SearchSickCircleBean) {
-        recyclerSearchCircle.adapter=adapter
-        adapter.updateList(reponse?.result!!)
-        if(reponse.result.size==0){
-            wuxx.visibility= View.INVISIBLE
-            wuxxcon.setText("没有找到“${etSsContent}”的相关病友圈")
+    override fun onSearchSickCircleSuccess(response: SearchSickCircleBean) {
+        val result = response.result
+        if(result.size==0){
+            recyclerSearchCircle.visibility=View.GONE
+            linearNo.visibility= View.VISIBLE
+            tvNoSearch.setText("没有找到"+etSsContent.text.toString()+"的相关病友圈")
         }
+        recyclerSearchCircle.adapter=adapter
+        adapter.updateList(response?.result!!)
     }
 
     override fun onSearchSickCircleError(message: String?) {

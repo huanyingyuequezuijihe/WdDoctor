@@ -28,7 +28,7 @@ class SearchSickCirclePresenterImpl(var searchSickCircleView: SearchSickCircleVi
 
                 override fun onNext(value: SearchSickCircleBean) {
                     value?.let {
-                        searchSickCircleView?.onSearchSickCircleSucess(it)
+                        searchSickCircleView?.onSearchSickCircleSuccess(it)
                     }
                 }
                 override fun onError(e: Throwable) {
