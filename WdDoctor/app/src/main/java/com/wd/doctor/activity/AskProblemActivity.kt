@@ -15,6 +15,10 @@ class AskProblemActivity : BaseActivity() {
         imgBackAsk.setOnClickListener {
             finish()
         }
+        //消息
+        img_message_black.setOnClickListener {
+            startActivityTo<MessageActivity>()
+        }
     }
 
     override fun initData() {

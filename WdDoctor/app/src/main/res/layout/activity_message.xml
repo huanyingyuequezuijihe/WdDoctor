@@ -6,12 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.MessageActivity"
-    android:padding="@dimen/dp_10"
+    android:background="#fff"
+    android:orientation="vertical"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:padding="@dimen/dp_10"
         >
         <ImageView
             android:id="@+id/imgBackMessage"
@@ -35,5 +37,209 @@
             android:text="全部已读"
             >
         </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ACACAC"
+        android:padding="@dimen/dp_10"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:padding="@dimen/dp_10"
+            >
+            <ImageView
+                android:id="@+id/imgXX"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@mipmap/message_icon_close_n"
+                >
+            </ImageView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="打开系统通知，H币入账等消息不错过"
+                android:layout_gravity="center"
+                >
+            </TextView>
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_20"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dp_10"
+                android:textSize="@dimen/sp_10"
+                android:textColor="#fff"
+                android:background="@drawable/sendbutton_bg_pwd"
+                android:text="开启"
+                >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        >
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#B6B6B6"
+        >
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_5"
+        android:id="@+id/system_message"
+        >
+        <ImageView
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_gravity="center"
+            android:src="@mipmap/system_information"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_20"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="系统信息"
+            android:layout_gravity="center"
+            android:textColor="#b8ead8"
+            android:layout_weight="1"
+            ></TextView>
+        <TextView
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:text="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:id="@+id/system_message_count"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/roundred"
+            ></TextView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#B6B6B6"
+        >
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_5"
+        android:id="@+id/interview_news"
+        >
+        <ImageView
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_gravity="center"
+            android:src="@mipmap/interview_news"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_20"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="问诊信息"
+            android:layout_gravity="center"
+            android:textColor="#f984a2"
+            android:layout_weight="1"
+            ></TextView>
+        <TextView
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:text="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:id="@+id/interview_news_count"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/roundred"
+            ></TextView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#B6B6B6"
+        >
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_5"
+        android:id="@+id/linearMessageH"
+        >
+        <ImageView
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_gravity="center"
+            android:src="@mipmap/recorded_message"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_20"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="H币入账消息"
+            android:layout_gravity="center"
+            android:textColor="#ffbf58"
+            android:layout_weight="1"
+            ></TextView>
+        <TextView
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:text="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:id="@+id/recorded_message_count"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@drawable/roundred"
+            ></TextView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#B6B6B6"
+        >
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_5"
+        android:id="@+id/wu_message"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="@dimen/dp_126"
+            android:layout_height="@dimen/dp_135"
+            android:layout_marginTop="@dimen/dp_150"
+            android:layout_gravity="center"
+            android:src="@mipmap/no_message"
+            ></ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="暂无信息"
+            android:gravity="center"
+            ></TextView>
     </LinearLayout>
 </LinearLayout>

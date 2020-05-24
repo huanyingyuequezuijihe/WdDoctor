@@ -223,4 +223,17 @@
         android:background="#7A7A7A"
         >
     </View>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="如需要更改以上信息 请致电000-5967432"
+            android:textColor="#3F51B5"
+            android:layout_marginBottom="@dimen/dp_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

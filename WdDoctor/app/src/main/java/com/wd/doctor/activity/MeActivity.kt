@@ -16,8 +16,13 @@ class MeActivity :BaseActivity() {
         imgBackMe.setOnClickListener {
             finish()
         }
+        //个人
         tvPersonalMe.setOnClickListener {
             startActivityTo<PersonalActivity>()
+        }
+        //消息
+        img_message_black.setOnClickListener {
+            startActivityTo<MessageActivity>()
         }
     }
 
