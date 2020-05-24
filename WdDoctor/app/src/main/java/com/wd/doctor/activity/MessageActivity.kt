@@ -16,5 +16,17 @@ class MessageActivity : BaseActivity() {
         imgBackMessage.setOnClickListener {
             finish()
         }
+        //系统消息
+        linearMessageX.setOnClickListener {
+            startActivityTo<XiTongMessageActivity>()
+        }
+        //问诊消息
+        linearMessageAsk.setOnClickListener {
+            startActivityTo<AskMessageActivity>()
+        }
+        //H币 入账消息
+        linearMessageH.setOnClickListener {
+            startActivityTo<HMessageActivity>()
+        }
     }
 }

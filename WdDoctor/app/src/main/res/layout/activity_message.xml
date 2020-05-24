@@ -96,7 +96,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_60"
         android:layout_marginTop="@dimen/dp_5"
-        android:id="@+id/system_message"
+        android:id="@+id/linearMessageX"
         >
         <ImageView
             android:layout_width="@dimen/dp_48"
@@ -139,7 +139,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_60"
         android:layout_marginTop="@dimen/dp_5"
-        android:id="@+id/interview_news"
+        android:id="@+id/linearMessageAsk"
         >
         <ImageView
             android:layout_width="@dimen/dp_48"

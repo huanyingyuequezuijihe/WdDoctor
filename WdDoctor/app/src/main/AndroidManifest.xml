@@ -15,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SearchActivity"></activity>
+        <activity android:name=".activity.HMessageActivity"></activity>
+        <activity android:name=".activity.AskMessageActivity" />
+        <activity android:name=".activity.XiTongMessageActivity" />
+        <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.MessageActivity" />
         <activity android:name=".activity.PersonalActivity" />
         <activity android:name=".activity.SickCircleInfoActivity" />
