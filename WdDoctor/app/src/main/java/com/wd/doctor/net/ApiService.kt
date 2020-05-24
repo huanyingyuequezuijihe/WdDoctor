@@ -63,4 +63,7 @@ interface ApiService {
     @POST(ApiUrl.publishComment)
     @FormUrlEncoded
     open fun getPublishCommentData(@Field("sickCircleId") sickCircleId :Int,@Field("content") content :String): Observable<PublishCommentBean>
+    //修改消息状态为全部已读
+    @PUT(ApiUrl.modifyAllStatus)
+    open fun getModifyAllStatusData(): Observable<ModifyAllStatusBean>
 }

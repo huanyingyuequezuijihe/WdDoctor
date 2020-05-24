@@ -4,9 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.wd.doctor.R
 import com.wd.doctor.base.BaseActivity
+import com.wd.doctor.bean.wy.ModifyAllStatusBean
+import com.wd.doctor.mvp.wy.presenter.ModifyAllStatusPresenter
+import com.wd.doctor.mvp.wy.presenterImpl.ModifyAllStatusPresenterImpl
+import com.wd.doctor.mvp.wy.view.ModifyAllStatusView
 import kotlinx.android.synthetic.main.activity_message.*
 
-class MessageActivity : BaseActivity() {
+class MessageActivity : BaseActivity(), ModifyAllStatusView {
+    val presenter by lazy { ModifyAllStatusPresenterImpl(this) }
     override fun initLayoutId(): Int {
         return R.layout.activity_message
     }
@@ -28,5 +33,17 @@ class MessageActivity : BaseActivity() {
         linearMessageH.setOnClickListener {
             startActivityTo<HMessageActivity>()
         }
+        //已读 全部消息
+        tvAllMessage.setOnClickListener {
+            presenter.onModifyAllStatusData()
+        }
+    }
+
+    override fun onModifyAllStatusViewError(message: String) {
+    }
+
+    override fun onModifyAllStatusViewSuccess(response: ModifyAllStatusBean) {
+        val toString = response.message.toString()
+        myToast(toString)
     }
 }

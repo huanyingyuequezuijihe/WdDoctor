@@ -30,4 +30,6 @@ object ApiUrl{
     const val searchSickCircle="health/doctor/sickCircle/v1/searchSickCircle"
     //解答  发表评论
     const val publishComment="health/doctor/sickCircle/verify/v1/publishComment"
+    //修改消息状态为全部已读
+    const val modifyAllStatus="health/doctor/verify/v1/modifyAllStatus"
 }

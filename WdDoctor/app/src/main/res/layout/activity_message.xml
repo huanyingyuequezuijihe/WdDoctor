@@ -32,6 +32,7 @@
             >
         </TextView>
         <TextView
+            android:id="@+id/tvAllMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="全部已读"
