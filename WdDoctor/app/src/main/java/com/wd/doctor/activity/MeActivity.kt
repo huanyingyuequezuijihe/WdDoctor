@@ -1,6 +1,7 @@
 package com.wd.doctor.activity
 
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.wd.doctor.R
 import com.wd.doctor.adapter.wy.RecyclerViewMe
 import com.wd.doctor.base.BaseActivity
@@ -29,7 +30,7 @@ class MeActivity :BaseActivity() {
     override fun initData() {
         super.initData()
         val gridLayoutManager = GridLayoutManager(this, 2)
-        recyclerMe.layoutManager=gridLayoutManager
+        recyclerMe.layoutManager= gridLayoutManager as RecyclerView.LayoutManager?
         //适配器
         val list:List<String> = listOf("历史问诊","我的钱包","被采纳的建议","设置自动回复")
         val recyclerViewMe = RecyclerViewMe(list, this)

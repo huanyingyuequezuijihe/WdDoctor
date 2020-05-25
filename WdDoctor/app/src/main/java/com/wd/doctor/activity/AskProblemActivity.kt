@@ -16,7 +16,7 @@ class AskProblemActivity : BaseActivity() {
             finish()
         }
         //消息
-        img_message_black.setOnClickListener {
+        imgMessageBlack.setOnClickListener {
             startActivityTo<MessageActivity>()
         }
     }

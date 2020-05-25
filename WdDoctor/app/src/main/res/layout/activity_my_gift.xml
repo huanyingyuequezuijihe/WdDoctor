@@ -5,53 +5,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.AskProblemActivity"
+    tools:context=".activity.MyGiftActivity"
     android:orientation="vertical"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        android:layout_marginLeft="@dimen/dp_20"
-        android:layout_marginRight="@dimen/dp_10"
         android:orientation="horizontal"
+        android:padding="@dimen/dp_10"
         >
         <ImageView
-            android:id="@+id/imgBackAsk"
+            android:id="@+id/imgBackGift"
             android:layout_width="@dimen/dp_16"
             android:layout_height="@dimen/dp_16"
             android:src="@mipmap/common_icon_back_black_n"
-            >
+            tools:ignore="MissingConstraints">
         </ImageView>
-
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="问诊列表"
-            android:textColor="#000000"
-            android:textSize="16sp"
+            android:text="我的礼物"
             android:textStyle="bold"
             android:gravity="center"
-            ></TextView>
-
-        <ImageView
-            android:id="@+id/imgMessageBlack"
-            android:layout_width="@dimen/dp_20"
-            android:layout_height="@dimen/dp_20"
-            android:src="@mipmap/common_nav_message_black_n"
-            ></ImageView>
+            android:textSize="@dimen/sp_14"
+            >
+        </TextView>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_2"
-        android:background="#767777"
-        android:layout_marginTop="@dimen/dp_5"
+        android:layout_height="@dimen/dp_1"
+        android:background="#ACACAC"
         >
     </View>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerAsk"
+        android:id="@+id/recyclerGift"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
     </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

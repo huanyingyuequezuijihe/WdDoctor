@@ -66,4 +66,7 @@ interface ApiService {
     //修改消息状态为全部已读
     @PUT(ApiUrl.modifyAllStatus)
     open fun getModifyAllStatusData(): Observable<ModifyAllStatusBean>
+    //查询医生历史问诊记录列表
+    @GET(ApiUrl.findHistoryInquiryRecord)
+    open fun getHistoryInquiryRecordData(@Query("page") page:Int,@Query("count") count:Int): Observable<FindHistoryInquiryRecordBean>
 }
