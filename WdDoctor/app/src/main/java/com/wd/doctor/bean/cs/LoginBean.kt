@@ -21,7 +21,7 @@ data class LoginBean (
         val imagePic:String,
         val inauguralHospital:String,
         val jobTitle:String,
-        val departmentId:String,
+        val departmentId:Int,
         val departmentName:String,
         val whetherHaveImagePic:Int
     )

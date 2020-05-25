@@ -32,6 +32,7 @@
                 android:src="@mipmap/login_em" />
 
             <EditText
+                style="@style/editFont"
                 android:id="@+id/login_em"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

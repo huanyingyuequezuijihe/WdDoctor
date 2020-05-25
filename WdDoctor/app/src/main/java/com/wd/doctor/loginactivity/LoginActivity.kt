@@ -1,7 +1,5 @@
 package com.wd.doctor.loginactivity
 
-import android.content.Intent
-import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.text.TextUtils
 import com.wd.doctor.R
 import com.wd.doctor.activity.HomeActivity
@@ -10,12 +8,16 @@ import com.wd.doctor.bean.cs.LoginBean
 import com.wd.doctor.mvp.cs.csmodel.CsLoginLoginModel
 import com.wd.doctor.mvp.cs.csview.CsLoginView
 import com.wd.doctor.net.App
+import com.wd.doctor.util.RegularUtil
 import com.wd.doctor.util.RsaCoder
 import com.wd.doctor.util.SpCacheUtil
 import kotlinx.android.synthetic.main.activity_login.*
+import org.jetbrains.anko.startActivity
 
 class LoginActivity : BaseActivity(),CsLoginView {
     val presenter by lazy { CsLoginLoginModel (this) }
+   /* var em:String =""
+    var pwd:String =""*/
 
 
     override fun initLayoutId(): Int {
@@ -25,13 +27,25 @@ class LoginActivity : BaseActivity(),CsLoginView {
     override fun initData() {
         var userEmail=SpCacheUtil.spCacheUtil.getStringData("userEmail")
         var userPwd= SpCacheUtil.spCacheUtil.getStringData("userPwd")
+
+        //https 为甚么  安全
+
        // println("dddddddd"+aa)
+        /*userEmail?.let {
+            var userPwd= SpCacheUtil.spCacheUtil.getStringData("userPwd")
+            userPwd?.let {
+                login_em.setText(userEmail)
+                login_pwd.setText(userPwd)
+            }
+
+        }*/
         userEmail?.let {
             login_em.setText(userEmail)
         }
         userPwd?.let {
             login_pwd.setText(userPwd)
         }
+
 /*
         if (!sp.getStringData("userEmail").isNullOrEmpty()){
             startActivityAndFinish<HomeActivity>()
@@ -47,15 +61,17 @@ class LoginActivity : BaseActivity(),CsLoginView {
 
     override fun initListener() {
         login_tv_ruzhu.setOnClickListener {
-            startActivityAndFinish<RuzhuOneActivity>()
+            startActivity<RuzhuOneActivity>()
+
         }
         login_btn.setOnClickListener {
             val email=login_em.text.toString()
             val pwd=  login_pwd.text.toString()
 
 
+
             val pwdmi = RsaCoder.encryptByPublicKey(pwd)
-            if (TextUtils.isEmpty(email)&&TextUtils.isEmpty(pwd)){
+            if (TextUtils.isEmpty(email)&& TextUtils.isEmpty(pwd)){
                 myToast("邮箱或密码不能为空")
             } else{
                 val  encypwd=RsaCoder.encryptByPublicKey(pwd)
@@ -66,7 +82,10 @@ class LoginActivity : BaseActivity(),CsLoginView {
 
             //presenter.onLoginSuccess(eamil,pwdmi)
             println("++++"+pwdmi)
-            //startActivityAndFinish<HomeActivity>()
+            /*val pwdmi = RsaCoder.encryptByPublicKey(pwd)
+            presenter.onLoginSuccess(em,pwdmi)
+            println("++++"+pwdmi)
+            //startActivityAndFinish<HomeActivity>()*/
         }
 
     }
@@ -83,17 +102,17 @@ class LoginActivity : BaseActivity(),CsLoginView {
             myToast(response?.message.toString())
         }
 
-        /*println("Login"+response.message)
+       /* SpCacheUtil.spCacheUtil.saveStringData("userEmail",em)
+        SpCacheUtil.spCacheUtil.saveStringData("userPwd",pwd)
 
-        val doctorId=response.result.id
-        SpCacheUtil.spCacheUtil.saveIntData("doctorId",doctorId)
+        val dovtorId=response.result.id.toString()
+        SpCacheUtil.spCacheUtil.saveStringData("dovtorId",dovtorId)
 
         val sessionId=response.result.sessionId
         SpCacheUtil.spCacheUtil.saveStringData("sessionId",sessionId)
 
-        val intent = Intent(this,HomeActivity::class.java)
-        //intent.addFlags(FLAG_ACTIVITY_NEW_TASK)
-        startActivity(intent)*/
+        startActivityAndFinish<HomeActivity>()*/
+
     }
 
     override fun onLoginError(msg: String) {
