@@ -31,4 +31,16 @@
             >
         </TextView>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:background="#BFBFBF"
+        >
+    </View>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSystem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

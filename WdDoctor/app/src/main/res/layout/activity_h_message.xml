@@ -31,4 +31,10 @@
             >
         </TextView>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:background="#BFBFBF"
+        >
+    </View>
 </LinearLayout>
