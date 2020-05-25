@@ -15,13 +15,15 @@ class AnswerActivity : BaseActivity() {
         imgBackAnswer.setOnClickListener {
             finish()
         }
+        imgSearchCircle.setOnClickListener {
+            startActivityTo<SearchActivity>()
+        }
     }
 
     override fun initData() {
         super.initData()
         //适配器
-        val fragmentPagerAsk =
-            FragmentPagerAsk(supportFragmentManager)
+        val fragmentPagerAsk = FragmentPagerAsk(supportFragmentManager)
         viewPagerAskWy.adapter=fragmentPagerAsk
         tabAskWy.setupWithViewPager(viewPagerAskWy)
     }

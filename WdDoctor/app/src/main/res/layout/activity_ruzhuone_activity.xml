@@ -10,7 +10,7 @@
         android:id="@+id/ruzhu_wanshan"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/dp_30"
-        android:layout_marginTop="@dimen/dp_74"
+        android:layout_marginTop="@dimen/dp_24"
         android:gravity="center"
         android:text="完善信息"
         android:textColor="#3087ea"

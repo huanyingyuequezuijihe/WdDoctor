@@ -8,9 +8,6 @@ import kotlinx.android.synthetic.main.activity_ruzhuone_activity.*
 import kotlinx.android.synthetic.main.activity_ruzhuone_activity.view.*
 
 class RuzhuOneActivity : BaseActivity() {
-
-
-
     override fun initLayoutId(): Int {
         return R.layout.activity_ruzhuone_activity
     }

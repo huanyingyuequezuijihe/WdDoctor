@@ -2,9 +2,7 @@ package com.wd.doctor.net
 
 import com.wd.doctor.bean.SendEmailCodeBean
 import com.wd.doctor.bean.cs.LoginBean
-import com.wd.doctor.bean.wy.FindDoctorByIdBean
-import com.wd.doctor.bean.wy.FindSickCircleInfoBean
-import com.wd.doctor.bean.wy.FindSickCircleListBean
+import com.wd.doctor.bean.wy.*
 import io.reactivex.Observable
 import retrofit2.Call
 import retrofit2.http.*
@@ -58,4 +56,14 @@ interface ApiService {
     //查询病友圈详情
     @GET(ApiUrl.findSickCircleInfo)
     open fun findSickCircleInfo(@Query("sickCircleId") sickCircleId:Int): Observable<FindSickCircleInfoBean>
+    //根据关键词查询病友圈
+    @GET(ApiUrl.searchSickCircle)
+    open fun searchSickCircledata(@Query ("keyWord") keyWord :String ):Observable<SearchSickCircleBean>
+    //解答  发表评论
+    @POST(ApiUrl.publishComment)
+    @FormUrlEncoded
+    open fun getPublishCommentData(@Field("sickCircleId") sickCircleId :Int,@Field("content") content :String): Observable<PublishCommentBean>
+    //修改消息状态为全部已读
+    @PUT(ApiUrl.modifyAllStatus)
+    open fun getModifyAllStatusData(): Observable<ModifyAllStatusBean>
 }

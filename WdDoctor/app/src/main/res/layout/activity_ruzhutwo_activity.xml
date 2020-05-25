@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/dp_30"
         android:gravity="center"
-        android:layout_marginTop="@dimen/dp_74"
+        android:layout_marginTop="@dimen/dp_24"
         android:textSize="16sp"
         android:textColor="#3087ea"
         android:text="完善信息"
