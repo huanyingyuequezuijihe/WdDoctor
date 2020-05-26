@@ -15,9 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.BindingWuActivity"></activity>
-        <activity android:name=".activity.MyWalletActivity"></activity>
-        <activity android:name=".activity.MyGiftActivity"></activity>
+        <activity android:name=".activity.SuggestActivity"></activity>
+        <activity android:name=".activity.BindingWuActivity" />
+        <activity android:name=".activity.MyWalletActivity" />
+        <activity android:name=".activity.MyGiftActivity" />
         <activity android:name=".activity.HistoryActivity" />
         <activity android:name=".activity.HMessageActivity" />
         <activity android:name=".activity.AskMessageActivity" />

@@ -56,6 +56,11 @@ class RecyclerViewMe : RecyclerView.Adapter<RecyclerViewMe.MyHolder> {
             val resources = context.resources
             val decodeResource = BitmapFactory.decodeResource(resources, R.mipmap.beicainayijian)
             holder.imgItemMeWy.setImageBitmap(decodeResource)
+            //点击
+            holder.itemView.setOnClickListener {
+                val intent = Intent(context, MyWalletActivity::class.java)
+                context.startActivity(intent)
+            }
         }else if(position==3){
             val resources = context.resources
             val decodeResource = BitmapFactory.decodeResource(resources, R.mipmap.zidonghuifu)
