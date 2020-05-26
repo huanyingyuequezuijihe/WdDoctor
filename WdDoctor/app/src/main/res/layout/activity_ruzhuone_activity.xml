@@ -83,7 +83,8 @@
         <androidx.appcompat.widget.AppCompatSpinner
             android:id="@+id/keshi_nice_spinner"
             android:layout_width="@dimen/dp_300"
-            android:layout_height="@dimen/dp_40" />
+            android:layout_height="@dimen/dp_40"
+            android:spinnerMode="dropdown"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -97,7 +98,8 @@
         <androidx.appcompat.widget.AppCompatSpinner
             android:id="@+id/zhicheng_nice_spinner"
             android:layout_width="@dimen/dp_300"
-            android:layout_height="@dimen/dp_40" />
+            android:layout_height="@dimen/dp_40"
+            android:spinnerMode="dropdown"/>
 
         <LinearLayout
             android:layout_width="match_parent"
