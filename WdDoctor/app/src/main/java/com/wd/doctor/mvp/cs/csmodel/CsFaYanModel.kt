@@ -10,7 +10,7 @@ import io.reactivex.observers.DisposableObserver
 import io.reactivex.schedulers.Schedulers
 
 class CsFaYanModel (var findLogin: CsFaYanView?): CsFaYanPresenter {
-    override fun onLoginSuccess(email: String) {
+    override fun onFaYanSuccess(email: String) {
         val createService = NetManager.netManager.createService(ApiService::class.java)
         val findDoctorById = createService.sendEmailCode(email)
         findDoctorById.subscribeOn(Schedulers.io())
@@ -20,17 +20,17 @@ class CsFaYanModel (var findLogin: CsFaYanView?): CsFaYanPresenter {
                 }
                 override fun onNext(t: SendEmailCodeBean) {
                     t.let {
-                        findLogin?.onLoginSuccess(t)
+                        findLogin?.onFaYanSuccess(t)
                     }
                 }
                 override fun onError(e: Throwable) {
-                    findLogin?.onLoginError(e?.message.toString())
+                    findLogin?.onFaYanError(e?.message.toString())
                 }
             })
     }
 
-    override fun onLoginError(msg: String) {
-        findLogin?.onLoginError(msg)
+    override fun onFaYanError(msg: String) {
+        findLogin?.onFaYanError(msg)
     }
 
     override fun destroyView() {
