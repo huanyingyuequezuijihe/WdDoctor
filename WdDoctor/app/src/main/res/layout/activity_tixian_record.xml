@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TixianRecordActivity"
+    android:orientation="vertical"
+    >
+    <com.wd.doctor.MyView.MytTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_view"
+        android:layout_marginTop="@dimen/dp_50"
+        ></com.wd.doctor.MyView.MytTitleView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tixianrecord_recyclerView"
+        android:layout_marginTop="@dimen/dp_6"
+        ></androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

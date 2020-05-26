@@ -38,7 +38,7 @@
         <TextView
             android:id="@+id/tixian_record"
             android:layout_width="wrap_content"
-            android:layout_height="1dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="提现记录"
             android:textSize="@dimen/sp_10"></TextView>

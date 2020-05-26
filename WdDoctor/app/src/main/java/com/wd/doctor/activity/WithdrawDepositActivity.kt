@@ -8,16 +8,18 @@ import com.wd.doctor.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_withdraw_deposit.*
 import org.jetbrains.anko.startActivity
 
-/*提现*/
+//提现
 class WithdrawDepositActivity : BaseActivity() {
     override fun initListener() {
         super.initListener()
-    /*    btn_tixian.setOnClickListener {
+        //去提现
+        btn_tixian.setOnClickListener {
             startActivity<WithdrawDepositNextActivity>()
         }
+        //提现记录
         tixian_record.setOnClickListener {
             startActivity<TixianRecordActivity>()
-        }*/
+        }
     }
     override fun initLayoutId(): Int {
         return R.layout.activity_withdraw_deposit
