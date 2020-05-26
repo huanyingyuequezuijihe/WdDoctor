@@ -1,5 +1,7 @@
 package com.wd.doctor.loginactivity
 
+import android.content.Intent
+import android.os.Bundle
 import android.text.TextUtils
 import com.wd.doctor.R
 import com.wd.doctor.base.BaseActivity
@@ -10,6 +12,7 @@ import com.wd.doctor.mvp.cs.csmodel.CsJiaoYanModel
 import com.wd.doctor.mvp.cs.csview.CsFaYanView
 import com.wd.doctor.mvp.cs.csview.CsJiaoYanView
 import kotlinx.android.synthetic.main.wang_activity.*
+import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.startActivity
 
 /**
@@ -47,7 +50,16 @@ class WangActivity: BaseActivity(),CsJiaoYanView,CsFaYanView {
             }else{
                 presenter.onLoginSuccess(zhang,yan)
 
+                var intent = Intent(this,SheActivity::class.java)
+                var bundle = Bundle()
+                bundle.putString("name",zhang)
+                intent.putExtras(bundle)
+                startActivity(intent)
+                finish()
+
             }
+
+
 
 
 
@@ -57,7 +69,6 @@ class WangActivity: BaseActivity(),CsJiaoYanView,CsFaYanView {
 
     override fun onLoginSuccess(response: YanEmailBean) {
         println("校验"+response)
-        startActivityAndFinish<SheActivity>()
     }
 
     override fun onLoginError(msg: String) {
