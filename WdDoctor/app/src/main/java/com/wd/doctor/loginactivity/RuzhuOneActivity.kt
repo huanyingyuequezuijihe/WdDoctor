@@ -6,6 +6,7 @@ import com.wd.doctor.net.NetManager
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_ruzhuone_activity.*
 import kotlinx.android.synthetic.main.activity_ruzhuone_activity.view.*
+import org.jetbrains.anko.startActivity
 
 class RuzhuOneActivity : BaseActivity() {
     override fun initLayoutId(): Int {
@@ -23,9 +24,13 @@ class RuzhuOneActivity : BaseActivity() {
     }
 
     override fun initListener() {
-        ruzhu_btn_xia.setOnClickListener {
-            startActivityAndFinish<RuzhuTwoActivity>()
+        ruzhu_back_one.setOnClickListener {
+            finish()
         }
+        ruzhu_btn_xia.setOnClickListener {
+            startActivity<RuzhuTwoActivity>()
+        }
+
 
     }
 }

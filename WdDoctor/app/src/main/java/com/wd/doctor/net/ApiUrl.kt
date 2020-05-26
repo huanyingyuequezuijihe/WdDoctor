@@ -12,6 +12,10 @@ object ApiUrl{
     const val user_register = "health/doctor/v1/applyJoin"
     //登录
     const val user_login = "health/doctor/v1/login"
+    //重置密码
+    const val chong_zhi="health/doctor/v1/resetUserPwd"
+    //校验验证码
+    const val yan_email = "health/doctor/v1/checkCode"
     //根路径
     const val BASE_URL="http://mobile.bwstudent.com/"
     //发送给验证码

@@ -30,6 +30,8 @@
         <activity android:name=".loginactivity.RuzhuOneActivity" />
         <activity android:name=".loginactivity.RuzhuTwoActivity" />
         <activity android:name=".loginactivity.RuzhuThreeActivity" />
+        <activity android:name=".loginactivity.WangActivity"/>
+        <activity android:name=".loginactivity.SheActivity"/>
         <activity android:name=".QDActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
