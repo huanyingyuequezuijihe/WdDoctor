@@ -35,7 +35,7 @@ class RecyclerViewAskWithin : RecyclerView.Adapter<RecyclerViewAskWithin.MyHolde
     }*/
     private var list=ArrayList<FindSickCircleListBean.Result>()
     //更新数据的操作
-    fun updateList(list: List<FindSickCircleListBean.Result>?){
+    fun updateList(list: List<FindSickCircleListBean.Result>){
         //判个空
         list?.let {
             this.list.clear()//清空
@@ -44,7 +44,7 @@ class RecyclerViewAskWithin : RecyclerView.Adapter<RecyclerViewAskWithin.MyHolde
         }
     }
     //加载更多，在不删除以前啥数据的基础上
-    fun loadMore(list:List<FindSickCircleListBean.Result>?){
+    fun loadMore(list:List<FindSickCircleListBean.Result>){
         list?.let {
             this.list.addAll(list)
             notifyDataSetChanged()

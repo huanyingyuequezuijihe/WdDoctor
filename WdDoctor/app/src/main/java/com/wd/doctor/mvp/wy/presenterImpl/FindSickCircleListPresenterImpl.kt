@@ -35,6 +35,26 @@ class FindSickCircleListPresenterImpl (var findSickCircleListView: FindSickCircl
                 }
             })
     }
+
+    override fun onFindSickCircleListLoadMoreSuccess(departmentId: Int, page: Int, count: Int) {
+        val createService = NetManager.netManager.createService(ApiService::class.java)
+        val findSickCircleList = createService.findSickCircleList(departmentId, page, count)
+        findSickCircleList?.subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(object : DisposableObserver<FindSickCircleListBean>(){
+                override fun onComplete() {
+                }
+                override fun onNext(t: FindSickCircleListBean) {
+                    t.let {
+                        findSickCircleListView?.onFindSickCircleListViewSuccess(t)
+                    }
+                }
+                override fun onError(e: Throwable) {
+                    findSickCircleListView?.onFindSickCircleListViewError(e.message.toString())
+                }
+            })
+    }
+
     override fun onFindSickCircleListError(msg: String) {
         findSickCircleListView?.onFindSickCircleListViewError(msg)
     }
