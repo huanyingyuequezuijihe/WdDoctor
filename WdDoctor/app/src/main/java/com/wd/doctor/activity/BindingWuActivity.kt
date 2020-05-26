@@ -18,11 +18,13 @@ class BindingWuActivity : BaseActivity() {
             finish()
         }
         title_view.title?.setText("绑定消息")
-       /* bangding_presioncard.setOnClickListener {
+        //绑定身份证
+        bangding_presioncard.setOnClickListener {
             startActivityTo<BangingIdcardActivity>()
         }
+        //绑定银行卡
         bangding_backcard.setOnClickListener {
             startActivityTo<BangdingBackcardActivity>()
-        }*/
+        }
     }
 }

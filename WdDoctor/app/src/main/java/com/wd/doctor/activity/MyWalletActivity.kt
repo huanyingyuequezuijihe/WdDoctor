@@ -3,6 +3,7 @@ package com.wd.doctor.activity
 import android.view.View
 import com.wd.doctor.R
 import com.wd.doctor.base.BaseActivity
+import com.wd.doctor.activity.WithdrawDepositActivity
 import kotlinx.android.synthetic.main.activity_mywallet.*
 import org.jetbrains.anko.startActivity
 /*钱包*/
@@ -23,10 +24,12 @@ class MyWalletActivity : BaseActivity() {
         tvBinDing.setOnClickListener {
             startActivityTo<BindingWuActivity>()
         }
-        my_money
+        //my_money
         //提现
-        btnTixian.setOnClickListener {  }
-        my_money_recyclerView
+        btnTixian.setOnClickListener {
+            startActivityTo<WithdrawDepositActivity>()
+        }
+        //my_money_recyclerView
     }
 
     override fun initData() {
