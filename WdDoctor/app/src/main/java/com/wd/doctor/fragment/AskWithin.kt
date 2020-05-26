@@ -47,7 +47,7 @@ class AskWithin(val departmentId:Int) :BaseFragment(), FindSickCircleListView{
             initData()
         }
         //监听列表的滑动
-        recyclerAskWithin.addOnScrollListener(object :RecyclerView.OnScrollListener(){
+        /*recyclerAskWithin.addOnScrollListener(object :RecyclerView.OnScrollListener(){
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
                 if(newState==RecyclerView.SCROLL_STATE_IDLE){
@@ -55,7 +55,7 @@ class AskWithin(val departmentId:Int) :BaseFragment(), FindSickCircleListView{
                     presenter.onFindSickCircleListSuccess(departmentId,1,count+10)
                 }
             }
-        })
+        })*/
         //
         recyclerAskWithin.addOnScrollListener(object :RecyclerView.OnScrollListener(){
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
@@ -73,7 +73,9 @@ class AskWithin(val departmentId:Int) :BaseFragment(), FindSickCircleListView{
                         var lastPosition=   manager.findLastVisibleItemPosition()
                         if (lastPosition==recyclerViewAskWithin.itemCount-1){
                             //调用加载条目
-                            presenter.onFindSickCircleListSuccess(departmentId,1,count+5)
+                            count+=5
+                            presenter.onFindSickCircleListLoadMoreSuccess(departmentId,1,count)
+                            //recyclerViewAskWithin.loadMore()
                         }
                     }
                 }

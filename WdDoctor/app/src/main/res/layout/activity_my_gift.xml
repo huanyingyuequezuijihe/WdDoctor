@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.AskMessageActivity"
+    tools:context=".activity.MyGiftActivity"
     android:orientation="vertical"
     >
     <LinearLayout
@@ -15,7 +15,7 @@
         android:padding="@dimen/dp_10"
         >
         <ImageView
-            android:id="@+id/imgBackMessageAsk"
+            android:id="@+id/imgBackGift"
             android:layout_width="@dimen/dp_16"
             android:layout_height="@dimen/dp_16"
             android:src="@mipmap/common_icon_back_black_n"
@@ -25,16 +25,23 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="问诊消息"
+            android:text="我的礼物"
             android:textStyle="bold"
             android:gravity="center"
+            android:textSize="@dimen/sp_14"
             >
         </TextView>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_2"
-        android:background="#BFBFBF"
+        android:layout_height="@dimen/dp_1"
+        android:background="#ACACAC"
         >
     </View>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerGift"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

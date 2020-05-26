@@ -15,6 +15,11 @@ class AnswerActivity : BaseActivity() {
         imgBackAnswer.setOnClickListener {
             finish()
         }
+        //消息
+        img_message_black.setOnClickListener {
+            startActivityTo<MessageActivity>()
+        }
+        //搜索
         imgSearchCircle.setOnClickListener {
             startActivityTo<SearchActivity>()
         }

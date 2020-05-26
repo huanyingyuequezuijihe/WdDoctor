@@ -46,6 +46,7 @@
         android:padding="@dimen/dp_10"
         >
         <LinearLayout
+            android:id="@+id/linearNotice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -118,15 +119,16 @@
             android:layout_weight="1"
             ></TextView>
         <TextView
+            android:id="@+id/tvSystemMessageCount"
             android:layout_width="@dimen/dp_16"
             android:layout_height="@dimen/dp_16"
             android:text="1"
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="#fff"
-            android:id="@+id/system_message_count"
             android:layout_marginRight="@dimen/dp_20"
             android:background="@drawable/roundred"
+            android:visibility="visible"
             ></TextView>
     </LinearLayout>
     <View
@@ -161,15 +163,16 @@
             android:layout_weight="1"
             ></TextView>
         <TextView
+            android:id="@+id/tvInterviewNewsCount"
             android:layout_width="@dimen/dp_16"
             android:layout_height="@dimen/dp_16"
             android:text="1"
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="#fff"
-            android:id="@+id/interview_news_count"
             android:layout_marginRight="@dimen/dp_20"
             android:background="@drawable/roundred"
+            android:visibility="visible"
             ></TextView>
     </LinearLayout>
     <View
@@ -203,15 +206,16 @@
             android:layout_weight="1"
             ></TextView>
         <TextView
+            android:id="@+id/tvRecordedMessageCount"
             android:layout_width="@dimen/dp_16"
             android:layout_height="@dimen/dp_16"
             android:text="1"
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="#fff"
-            android:id="@+id/recorded_message_count"
             android:layout_marginRight="@dimen/dp_20"
             android:background="@drawable/roundred"
+            android:visibility="visible"
             ></TextView>
     </LinearLayout>
     <View

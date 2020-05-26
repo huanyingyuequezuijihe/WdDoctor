@@ -1,6 +1,7 @@
 package com.wd.doctor.adapter.wy
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.wd.doctor.R
+import com.wd.doctor.activity.HistoryActivity
+import com.wd.doctor.activity.MyWalletActivity
 import org.jetbrains.anko.toast
 
 /**
@@ -35,23 +38,37 @@ class RecyclerViewMe : RecyclerView.Adapter<RecyclerViewMe.MyHolder> {
             val resources = context.resources
             val decodeResource = BitmapFactory.decodeResource(resources, R.mipmap.wenzhen)
             holder.imgItemMeWy.setImageBitmap(decodeResource)
+            //点击
+            holder.itemView.setOnClickListener {
+                val intent = Intent(context, HistoryActivity::class.java)
+                context.startActivity(intent)
+            }
         }else if(position==1){
             val resources = context.resources
             val decodeResource = BitmapFactory.decodeResource(resources, R.mipmap.qianbao)
             holder.imgItemMeWy.setImageBitmap(decodeResource)
+            //点击
+            holder.itemView.setOnClickListener {
+                val intent = Intent(context, MyWalletActivity::class.java)
+                context.startActivity(intent)
+            }
         }else if(position==2){
             val resources = context.resources
             val decodeResource = BitmapFactory.decodeResource(resources, R.mipmap.beicainayijian)
             holder.imgItemMeWy.setImageBitmap(decodeResource)
+            //点击
+            holder.itemView.setOnClickListener {
+                val intent = Intent(context, MyWalletActivity::class.java)
+                context.startActivity(intent)
+            }
         }else if(position==3){
             val resources = context.resources
             val decodeResource = BitmapFactory.decodeResource(resources, R.mipmap.zidonghuifu)
             holder.imgItemMeWy.setImageBitmap(decodeResource)
         }
         //点击
-        holder.itemView.setOnClickListener {
-            context.toast("跳转")
-        }
+       /* holder.itemView.setOnClickListener {
+        }*/
     }
     override fun getItemCount(): Int {
         return list.size

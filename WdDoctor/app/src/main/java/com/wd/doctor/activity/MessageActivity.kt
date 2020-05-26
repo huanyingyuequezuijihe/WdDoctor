@@ -2,6 +2,7 @@ package com.wd.doctor.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.wd.doctor.R
 import com.wd.doctor.base.BaseActivity
 import com.wd.doctor.bean.wy.ModifyAllStatusBean
@@ -37,6 +38,10 @@ class MessageActivity : BaseActivity(), ModifyAllStatusView {
         tvAllMessage.setOnClickListener {
             presenter.onModifyAllStatusData()
         }
+        //取消 X
+        imgXX.setOnClickListener {
+            linearNotice.visibility=View.GONE
+        }
     }
 
     override fun onModifyAllStatusViewError(message: String) {
@@ -45,5 +50,9 @@ class MessageActivity : BaseActivity(), ModifyAllStatusView {
     override fun onModifyAllStatusViewSuccess(response: ModifyAllStatusBean) {
         val toString = response.message.toString()
         myToast(toString)
+        //隐藏  系统 问诊 H币入账信息
+        tvSystemMessageCount.visibility= View.GONE
+        tvInterviewNewsCount.visibility=View.GONE
+        tvRecordedMessageCount.visibility=View.GONE
     }
 }

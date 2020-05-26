@@ -36,4 +36,6 @@ object ApiUrl{
     const val publishComment="health/doctor/sickCircle/verify/v1/publishComment"
     //修改消息状态为全部已读
     const val modifyAllStatus="health/doctor/verify/v1/modifyAllStatus"
+    //查询医生历史问诊记录列表
+    const val findHistoryInquiryRecord="health/doctor/inquiry/verify/v1/findHistoryInquiryRecord"
 }

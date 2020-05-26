@@ -36,7 +36,7 @@
             ></TextView>
 
         <ImageView
-            android:id="@+id/img_message_black"
+            android:id="@+id/imgMessageBlack"
             android:layout_width="@dimen/dp_20"
             android:layout_height="@dimen/dp_20"
             android:src="@mipmap/common_nav_message_black_n"
