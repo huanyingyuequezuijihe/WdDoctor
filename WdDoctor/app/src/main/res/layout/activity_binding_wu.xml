@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.BindingWuActivity"
+    tools:context=".activity.BindingWuActivity"
     android:orientation="vertical"
     >
 <com.wd.doctor.MyView.MytTitleView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/title_view"
-    android:layout_marginTop="@dimen/dp_50"
+    android:layout_marginTop="@dimen/dp_20"
     ></com.wd.doctor.MyView.MytTitleView>
     <LinearLayout
         android:layout_width="@dimen/dp_52"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_50"
-        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_30"
         android:orientation="vertical"
         >
         <TextView
