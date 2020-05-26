@@ -38,6 +38,10 @@ class MessageActivity : BaseActivity(), ModifyAllStatusView {
         tvAllMessage.setOnClickListener {
             presenter.onModifyAllStatusData()
         }
+        //取消 X
+        imgXX.setOnClickListener {
+            linearNotice.visibility=View.GONE
+        }
     }
 
     override fun onModifyAllStatusViewError(message: String) {
