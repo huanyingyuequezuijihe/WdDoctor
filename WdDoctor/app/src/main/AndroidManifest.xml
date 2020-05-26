@@ -15,10 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.BangingIdcardActivity"></activity>
-        <activity android:name=".activity.BangdingBackcardActivity"></activity>
-        <activity android:name=".activity.WithdrawDepositActivity"></activity>
-        <activity android:name=".activity.SuggestActivity"></activity>
+        <activity android:name=".activity.AutomaticActivity"></activity>
+        <activity android:name=".activity.BangingIdcardActivity" />
+        <activity android:name=".activity.BangdingBackcardActivity" />
+        <activity android:name=".activity.WithdrawDepositActivity" />
+        <activity android:name=".activity.SuggestActivity" />
         <activity android:name=".activity.BindingWuActivity" />
         <activity android:name=".activity.MyWalletActivity" />
         <activity android:name=".activity.MyGiftActivity" />
