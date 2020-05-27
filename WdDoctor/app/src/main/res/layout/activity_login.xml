@@ -54,14 +54,30 @@
                 android:layout_marginTop="@dimen/dp_10"
                 android:layout_marginRight="@dimen/dp_20"
                 android:layout_marginBottom="@dimen/dp_10"
+                android:id="@+id/kock"
                 android:src="@mipmap/login_pwd" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/login_pwd"
+                    android:layout_width="@dimen/dp_240"
+                    android:layout_height="wrap_content"
+                    android:password="true"
+                    android:hint="请输入密码" />
+                <ToggleButton
+                    android:id="@+id/login_img_yan"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:textOn=""
+                    android:textOff=""
+                    android:background="@mipmap/ruzhu_yan"/>
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/login_pwd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:password="true"
-                android:hint="请输入密码" />
+
         </LinearLayout>
 
         <RelativeLayout

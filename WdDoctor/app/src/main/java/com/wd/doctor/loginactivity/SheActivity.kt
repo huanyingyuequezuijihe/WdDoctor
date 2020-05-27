@@ -1,5 +1,6 @@
 package com.wd.doctor.loginactivity
 
+import android.text.InputType
 import android.text.TextUtils
 import com.wd.doctor.R
 import com.wd.doctor.base.BaseActivity
@@ -33,6 +34,28 @@ class SheActivity: BaseActivity(),CsChongZhiView {
 
 
     override fun initListener() {
+        chongzhi_img_yan1.setOnCheckedChangeListener{View,isChecked ->
+            if (isChecked){
+                chongzhi_img_yan1.setBackgroundResource(R.mipmap.ruzhu_yan_zhang)
+                chongzhi_ed_pwd.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+                //login_pwd.inputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+            }else{
+                chongzhi_img_yan1.setBackgroundResource(R.mipmap.ruzhu_yan)
+                chongzhi_ed_pwd.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
+            }
+        }
+        chongzhi_img_yan2.setOnCheckedChangeListener{View,isChecked ->
+            if (isChecked){
+                chongzhi_img_yan2.setBackgroundResource(R.mipmap.ruzhu_yan_zhang)
+                chongzhi_ed_pwd2.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+                //login_pwd.inputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+            }else{
+                chongzhi_img_yan2.setBackgroundResource(R.mipmap.ruzhu_yan)
+                chongzhi_ed_pwd2.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
+            }
+        }
+
+
         ruzhu_back_she.setOnClickListener {
             finish()
         }

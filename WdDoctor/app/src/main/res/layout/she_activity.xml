@@ -52,15 +52,18 @@
                     android:layout_marginLeft="@dimen/dp_10"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:password="true"
                     android:hint="请设置新密码" />
 
-                <ImageView
-                    android:id="@+id/chongzhi_img_yan"
-                    android:layout_width="@dimen/dp_16"
-                    android:layout_height="@dimen/dp_16"
+                <ToggleButton
+                    android:id="@+id/chongzhi_img_yan1"
                     android:layout_gravity="center"
                     android:layout_marginRight="@dimen/dp_10"
-                    android:src="@mipmap/ruzhu_yan" />
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:textOn=""
+                    android:textOff=""
+                    android:background="@mipmap/ruzhu_yan"/>
             </LinearLayout>
 
             <LinearLayout
@@ -75,16 +78,19 @@
                     android:layout_height="@dimen/dp_40"
                     android:layout_marginLeft="@dimen/dp_10"
                     android:layout_weight="1"
+                    android:password="true"
                     android:background="@null"
                     android:hint="请再次确认密码" />
 
-                <ImageView
+                <ToggleButton
                     android:id="@+id/chongzhi_img_yan2"
-                    android:layout_width="@dimen/dp_16"
-                    android:layout_height="@dimen/dp_16"
                     android:layout_gravity="center"
                     android:layout_marginRight="@dimen/dp_10"
-                    android:src="@mipmap/ruzhu_yan" />
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:textOn=""
+                    android:textOff=""
+                    android:background="@mipmap/ruzhu_yan"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
