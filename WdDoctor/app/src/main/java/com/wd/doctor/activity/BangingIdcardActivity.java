@@ -4,12 +4,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.wd.doctor.MyView.MytTitleView;
+import com.wd.doctor.MyView.MyTitleView;
 import com.wd.doctor.R;
 import com.wd.doctor.base.BaseActivity;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 /**
  * @author 吴健
@@ -20,7 +19,7 @@ import org.jetbrains.annotations.Nullable;
  * //绑定身份证
  */
 public class BangingIdcardActivity extends BaseActivity {
-    private MytTitleView titleView;
+    private MyTitleView titleView;
     private ImageView cameraIccard;
     private ImageView cameraRecitecard;
     private Button btnNext;
@@ -54,7 +53,7 @@ public class BangingIdcardActivity extends BaseActivity {
     }
 
     private void initView() {
-        titleView = (MytTitleView) findViewById(R.id.title_view);
+        titleView = (MyTitleView) findViewById(R.id.title_view);
         cameraIccard = (ImageView) findViewById(R.id.camera_iccard);
         cameraRecitecard = (ImageView) findViewById(R.id.camera_recitecard);
         btnNext = (Button) findViewById(R.id.btn_next);

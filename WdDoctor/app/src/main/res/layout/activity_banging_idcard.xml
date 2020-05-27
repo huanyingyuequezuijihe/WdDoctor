@@ -7,12 +7,12 @@
     tools:context=".activity.BangingIdcardActivity"
     android:orientation="vertical"
     >
-    <com.wd.doctor.MyView.MytTitleView
+    <com.wd.doctor.MyView.MyTitleView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/title_view"
         android:layout_marginTop="@dimen/dp_50"
-        ></com.wd.doctor.MyView.MytTitleView>
+        ></com.wd.doctor.MyView.MyTitleView>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="@dimen/dp_260"
         android:layout_height="@dimen/dp_160"

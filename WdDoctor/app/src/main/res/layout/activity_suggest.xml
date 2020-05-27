@@ -8,13 +8,13 @@
     tools:context=".activity.SuggestActivity"
     android:orientation="vertical"
     >
-    <com.wd.doctor.MyView.MytTitleView
+    <com.wd.doctor.MyView.MyTitleView
         android:id="@+id/myTitleSuggest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/dp_10"
         >
-    </com.wd.doctor.MyView.MytTitleView>
+    </com.wd.doctor.MyView.MyTitleView>
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_2"

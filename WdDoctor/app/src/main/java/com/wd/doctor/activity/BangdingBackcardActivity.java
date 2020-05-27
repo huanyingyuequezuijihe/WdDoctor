@@ -4,12 +4,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.wd.doctor.MyView.MytTitleView;
+import com.wd.doctor.MyView.MyTitleView;
 import com.wd.doctor.R;
 import com.wd.doctor.base.BaseActivity;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 /**
  * @author 吴健
@@ -20,7 +19,7 @@ import org.jetbrains.annotations.Nullable;
  * //绑定银行卡
  */
 public class BangdingBackcardActivity extends BaseActivity {
-    private MytTitleView titleView;
+    private MyTitleView titleView;
     private ImageView cameraBackcard;
     private Button btnNext;
 
@@ -53,7 +52,7 @@ public class BangdingBackcardActivity extends BaseActivity {
     }
 
     private void initView() {
-        titleView = (MytTitleView) findViewById(R.id.title_view);
+        titleView = (MyTitleView) findViewById(R.id.title_view);
         cameraBackcard = (ImageView) findViewById(R.id.camera_backcard);
         btnNext = (Button) findViewById(R.id.btn_next);
     }

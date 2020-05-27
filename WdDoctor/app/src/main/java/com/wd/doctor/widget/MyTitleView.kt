@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.title.view.*
  * @date :2020/5/25 8:18
  * @classname :
  */
-class MytTitleView :RelativeLayout{
+class MyTitleView :RelativeLayout{
   var  back:ImageView?=null
   var  title: TextView?=null
   var view:View?=null

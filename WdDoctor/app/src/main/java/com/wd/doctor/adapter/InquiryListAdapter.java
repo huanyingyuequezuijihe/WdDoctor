@@ -24,11 +24,11 @@ import java.util.ArrayList;
 public class InquiryListAdapter extends RecyclerView.Adapter<InquiryListAdapter.InquiryListHolder> {
      private ArrayList<InquiryBean> list=new ArrayList<>();
      private Context context;
-  private InquiryListHolder inquiryListHolder;
+     private InquiryListHolder inquiryListHolder;
 
   public InquiryListAdapter(ArrayList<InquiryBean> list, Context context) {
-    this.list.addAll(list);
-    this.context = context;
+      this.list.addAll(list);
+      this.context = context;
   }
 
   @NonNull
