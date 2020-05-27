@@ -19,6 +19,7 @@ class HomeActivity : BaseActivity(),FindDoctorByIdView{
     }
     override fun initListener() {
         super.initListener()
+        //问诊
         tvAskProblem.setOnClickListener {
             startActivityTo<AskProblemActivity>()
         }

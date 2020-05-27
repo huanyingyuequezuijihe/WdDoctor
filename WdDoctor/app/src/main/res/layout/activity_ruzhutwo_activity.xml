@@ -3,41 +3,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <ImageView
         android:id="@+id/ruzhu_back_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/common_icon_back_black_n"
-        android:layout_margin="@dimen/dp_10"/>
+        android:layout_margin="@dimen/dp_10"
+        android:src="@mipmap/common_icon_back_black_n" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_marginLeft="@dimen/dp_30"
-        android:layout_marginRight="@dimen/dp_30">
+        android:layout_marginRight="@dimen/dp_30"
+        android:orientation="vertical">
+
         <TextView
+            android:id="@+id/ruzhu_wanshan"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/dp_30"
-            android:gravity="center"
             android:layout_marginTop="@dimen/dp_20"
-            android:textSize="16sp"
-            android:textColor="#3087ea"
+            android:gravity="center"
             android:text="完善信息"
-            android:id="@+id/ruzhu_wanshan"/>
+            android:textColor="#3087ea"
+            android:textSize="16sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="@dimen/dp_30"
             android:gravity="center"
-            android:textSize="16sp"
+            android:text="审核通过即可成功入驻"
             android:textColor="#3087ea"
-            android:text="审核通过即可成功入驻"/>
+            android:textSize="16sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_28"
             android:text="您的邮箱账号"
-            android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="@dimen/dp_28"/>
+            android:textSize="14sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_40"
@@ -56,34 +62,38 @@
                 android:id="@+id/tv_get_captcha"
                 android:layout_width="@dimen/dp_104"
                 android:layout_height="@dimen/dp_40"
-                android:textColor="#ffffff"
                 android:layout_gravity="center"
                 android:background="#783cec"
                 android:text="获取验证码"
+                android:textColor="#ffffff"
                 android:textSize="12sp" />
 
 
         </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
             android:text="请输入验证码"
-            android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="@dimen/dp_30"/>
+            android:textSize="14sp" />
+
         <EditText
             android:id="@+id/ruzhu_ed_code"
             android:layout_width="@dimen/dp_300"
             android:layout_height="@dimen/dp_40"
             android:background="@null"
             android:padding="10dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
             android:text="请输入密码"
-            android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="@dimen/dp_30"/>
+            android:textSize="14sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_40"
@@ -96,23 +106,28 @@
                 android:layout_height="@dimen/dp_40"
                 android:layout_weight="1"
                 android:background="@null"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:password="true" />
 
-            <ImageView
-                android:id="@+id/ruzhu_img_yan"
-                android:layout_gravity="center"
-                android:layout_marginRight="@dimen/dp_10"
+            <ToggleButton
+                android:id="@+id/ruzhu_img_yan_pwd1"
                 android:layout_width="@dimen/dp_16"
                 android:layout_height="@dimen/dp_16"
-                android:src="@mipmap/ruzhu_yan"/>
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@mipmap/ruzhu_yan"
+                android:textOff=""
+                android:textOn="" />
         </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
             android:text="请再次输入密码"
-            android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="@dimen/dp_30"/>
+            android:textSize="14sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_40"
@@ -125,16 +140,20 @@
                 android:layout_height="@dimen/dp_40"
                 android:layout_weight="1"
                 android:background="@null"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:password="true" />
 
-            <ImageView
-                android:id="@+id/ruzhu_img_yan2"
-                android:layout_gravity="center"
-                android:layout_marginRight="@dimen/dp_10"
+            <ToggleButton
+                android:id="@+id/ruzhu_img_yan_pwd2"
                 android:layout_width="@dimen/dp_16"
                 android:layout_height="@dimen/dp_16"
-                android:src="@mipmap/ruzhu_yan_zhang"/>
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@mipmap/ruzhu_yan"
+                android:textOff=""
+                android:textOn="" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

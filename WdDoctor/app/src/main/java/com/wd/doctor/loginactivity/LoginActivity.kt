@@ -1,6 +1,9 @@
 package com.wd.doctor.loginactivity
 
+import android.text.InputType
 import android.text.TextUtils
+import android.view.View
+import android.widget.CompoundButton
 import com.wd.doctor.R
 import com.wd.doctor.activity.HomeActivity
 import com.wd.doctor.base.BaseActivity
@@ -34,6 +37,17 @@ class LoginActivity : BaseActivity(),CsLoginView {
     }
 
     override fun initListener() {
+        login_img_yan.setOnCheckedChangeListener{View,isChecked ->
+            if (isChecked){
+                login_img_yan.setBackgroundResource(R.mipmap.ruzhu_yan_zhang)
+                login_pwd.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+                //login_pwd.inputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+            }else{
+                login_img_yan.setBackgroundResource(R.mipmap.ruzhu_yan)
+                login_pwd.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
+            }
+        }
+
         login_tv_wang.setOnClickListener {
             startActivity<WangActivity>()
         }
