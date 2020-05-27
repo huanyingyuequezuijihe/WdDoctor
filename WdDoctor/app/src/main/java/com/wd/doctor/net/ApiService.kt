@@ -1,7 +1,9 @@
 package com.wd.doctor.net
 
 import com.wd.doctor.bean.SendEmailCodeBean
+import com.wd.doctor.bean.cs.ChongZhiBean
 import com.wd.doctor.bean.cs.LoginBean
+import com.wd.doctor.bean.cs.YanEmailBean
 import com.wd.doctor.bean.wy.*
 import io.reactivex.Observable
 import retrofit2.Call
@@ -41,8 +43,14 @@ interface ApiService {
     @POST(ApiUrl.user_login)
     @FormUrlEncoded
     open fun  getLogin(@Field("email") email: String, @Field("pwd") pwd:String):Observable<LoginBean>
-
-
+    //校验验证码
+    @POST(ApiUrl.yan_email)
+    @FormUrlEncoded
+    open fun yanEmail(@Field("email") email: String,@Field("code") code:String):Observable<YanEmailBean>
+    //重置密码
+    @PUT(ApiUrl.chong_zhi)
+    @FormUrlEncoded
+    open fun chongZhi(@Field("email") email: String,@Field("pwd1") pwd1: String,@Field("pwd2") pwd2: String):Observable<ChongZhiBean>
     //发送验证码
     @POST(ApiUrl.sendEmailCode)
     @FormUrlEncoded
