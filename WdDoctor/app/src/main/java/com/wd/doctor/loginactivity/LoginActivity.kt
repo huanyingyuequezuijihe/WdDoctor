@@ -52,7 +52,7 @@ class LoginActivity : BaseActivity(),CsLoginView {
             startActivity<WangActivity>()
         }
         login_tv_ruzhu.setOnClickListener {
-            startActivity<RuzhuOneActivity>()
+            startActivity<RuzhuTwoActivity>()
 
         }
         login_btn.setOnClickListener {
