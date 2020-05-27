@@ -22,12 +22,15 @@ class HomeActivity : BaseActivity(),FindDoctorByIdView{
         tvAskProblem.setOnClickListener {
             startActivityTo<AskProblemActivity>()
         }
+        //答疑
         tvAnswerWy.setOnClickListener {
             startActivityTo<AnswerActivity>()
         }
+        //我的
         tvAdministrationWy.setOnClickListener {
             startActivityTo<MeActivity>()
         }
+        //消息
         img_message_black.setOnClickListener {
             startActivityTo<MessageActivity>()
         }

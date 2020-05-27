@@ -16,6 +16,40 @@ class AutomaticActivity : BaseActivity() {
         imgBackAutomatic.setOnClickListener { finish() }
         //消息页
         imgMessageAutomatic.setOnClickListener { startActivityTo<MessageActivity>() }
+        //当选中一个，其他的不选中
+        ckBox1.setOnClickListener {
+            val checked = ckBox1.isChecked
+            if(checked){
+                ckBox2.isChecked=false
+                ckBox3.isChecked=false
+                ckBox4.isChecked=false
+            }
+        }
+        ckBox2.setOnClickListener {
+            val checked = ckBox2.isChecked
+            if(checked){
+                ckBox1.isChecked=false
+                ckBox3.isChecked=false
+                ckBox4.isChecked=false
+            }
+        }
+        ckBox3.setOnClickListener {
+            val checked = ckBox3.isChecked
+            if(checked){
+                ckBox2.isChecked=false
+                ckBox1.isChecked=false
+                ckBox4.isChecked=false
+            }
+        }
+        ckBox4.setOnClickListener {
+            val checked = ckBox4.isChecked
+            if(checked){
+                ckBox2.isChecked=false
+                ckBox3.isChecked=false
+                ckBox1.isChecked=false
+            }
+        }
+
     }
 
     override fun initData() {
