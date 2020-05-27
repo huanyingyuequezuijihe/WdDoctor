@@ -17,17 +17,12 @@ class RuzhuOneActivity : BaseActivity() {
 
     override fun initData() {
         val keshi:String ="mobile.bwstudent.com/health/share/knowledgeBase/v1/findDepartment"
-       //var keshi1=NetManager.netManager.retrofitUtil.baseUrl(keshi)
-        //println("aaaaaaa"+keshi1)
         var arr = arrayOf("aaa","bbb","ccc")
         val aa=findViewById<Spinner>(R.id.keshi_nice_spinner)
         val adapter=ArrayAdapter(this,R.layout.color_spinner_layout,arr)
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout)
         aa.adapter=adapter
         aa.onItemSelectedListener
-
-
-
 
 
     }
