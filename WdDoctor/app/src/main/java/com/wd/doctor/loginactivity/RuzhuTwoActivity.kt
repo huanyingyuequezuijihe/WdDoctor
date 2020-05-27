@@ -95,13 +95,10 @@ class RuzhuTwoActivity : BaseActivity(),CsFaYanView {
                     SpCacheUtil.spCacheUtil.saveStringData("ruzhupwd1",encypwd1)
                     //var encypwd2= SpCacheUtil.spCacheUtil.getStringData("ruzhupwd1").toString()
 
-                    var intent = Intent(this,RuzhuOneActivity::class.java)
-                    var bundle = Bundle()
-                    bundle.putString("name",zhang)
-                    bundle.putString("email",yan)
-                    intent.putExtras(bundle)
-                    startActivity(intent)
-                    finish()
+                    SpCacheUtil.spCacheUtil.saveStringData("email",zhang)
+                    SpCacheUtil.spCacheUtil.saveStringData("yan",yan)
+
+                    startActivity<RuzhuOneActivity>()
 
                 }
 

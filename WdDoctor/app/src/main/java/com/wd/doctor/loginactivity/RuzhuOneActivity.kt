@@ -13,6 +13,7 @@ import com.wd.doctor.mvp.cs.csmodel.CsKeShiModel
 import com.wd.doctor.mvp.cs.csmodel.CsZhiChengModel
 import com.wd.doctor.mvp.cs.csview.CsKeShiView
 import com.wd.doctor.mvp.cs.csview.CsZhiChengView
+import com.wd.doctor.util.SpCacheUtil
 import kotlinx.android.synthetic.main.activity_ruzhuone_activity.*
 import org.jetbrains.anko.startActivity
 
@@ -34,18 +35,7 @@ class RuzhuOneActivity : BaseActivity(), CsKeShiView, CsZhiChengView {
     override fun initData() {
         presenterkeshi.onKeShiSuccess("http://mobile.bwstudent.com/health/share/knowledgeBase/v1/findDepartment")
         presenterzhi.onZhiChengSuccess()
-
-
-
-        var bundle = this.intent.extras
-        //bundle.get("name").toString()
-        var zhang = bundle?.get("name").toString()
-        var email = bundle?.get("email").toString()
-        println("ppppppp" + zhang + "wwww" + email)
-
-
     }
-
     override fun initListener() {
         ruzhu_back_one.setOnClickListener {
             finish()
@@ -54,15 +44,12 @@ class RuzhuOneActivity : BaseActivity(), CsKeShiView, CsZhiChengView {
             var ruzhu_name = ruzhu_ed_name.text.toString()
             var ruzhu_yiyuan = ruzhu_ed_yiyuan.text.toString()
 
-
-
+            SpCacheUtil.spCacheUtil.saveStringData("name",ruzhu_name)
+            SpCacheUtil.spCacheUtil.saveStringData("yiyuan",ruzhu_yiyuan)
 
             startActivity<RuzhuThreeActivity>()
         }
-
-
     }
-
     override fun onKeShiSuccess(response: KeShiBean?) {
         var result = response?.result
 
@@ -75,6 +62,7 @@ class RuzhuOneActivity : BaseActivity(), CsKeShiView, CsZhiChengView {
         spinner_keshi.adapter = startAdapter2
         spinner_keshi.setSelection(0)
         var jobid = strid2.get(0)
+        SpCacheUtil.spCacheUtil.saveIntData("keshiid",jobid)
 
         println("ssssssssssss"+jobid.toString())
 
@@ -98,6 +86,7 @@ class RuzhuOneActivity : BaseActivity(), CsKeShiView, CsZhiChengView {
         spinner_zhicheng.adapter = startAdapter
         spinner_zhicheng.setSelection(0)
         var jobid = strid.get(0)
+        SpCacheUtil.spCacheUtil.saveIntData("zhichengid",jobid)
 
         println("ssssssssssss"+jobid.toString())
 
