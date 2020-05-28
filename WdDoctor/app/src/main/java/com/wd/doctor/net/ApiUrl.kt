@@ -38,4 +38,8 @@ object ApiUrl{
     const val modifyAllStatus="health/doctor/verify/v1/modifyAllStatus"
     //查询医生历史问诊记录列表
     const val findHistoryInquiryRecord="health/doctor/inquiry/verify/v1/findHistoryInquiryRecord"
+    //查询问诊聊天记录
+    const val findInquiryDetailsList="health/doctor/inquiry/verify/v1/findInquiryDetailsList"
+    //发送消息（文本消息）
+    const val pushMessage="health/doctor/inquiry/verify/v1/pushMessage"
 }

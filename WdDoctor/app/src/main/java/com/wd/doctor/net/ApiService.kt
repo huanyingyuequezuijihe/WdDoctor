@@ -18,7 +18,6 @@ import java.util.*
  * @classname :ApiService
  */
 interface ApiService {
-
     //注册
     @POST(ApiUrl.user_register)
     @FormUrlEncoded
@@ -37,8 +36,6 @@ interface ApiService {
    // @GET("mobile.bwstudent.com/health/share/knowledgeBase/v1/findDepartment")
     //@FormUrlEncoded
     //open fun getkeshi() :Observable<>
-
-
     //登录
     @POST(ApiUrl.user_login)
     @FormUrlEncoded
@@ -77,4 +74,8 @@ interface ApiService {
     //查询医生历史问诊记录列表
     @GET(ApiUrl.findHistoryInquiryRecord)
     open fun getHistoryInquiryRecordData(@Query("page") page:Int,@Query("count") count:Int): Observable<FindHistoryInquiryRecordBean>
+    //发送消息（文本消息）
+    @POST(ApiUrl.pushMessage)
+    @FormUrlEncoded
+    open fun getPushMessageData(@Field("inquiryId") inquiryId :Int,@Field("content") content:String,@Query("type") type:Int,@Query("userId") userId:Int): Observable<PushMessageBean>
 }

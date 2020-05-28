@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.UserChatActivity"
     android:orientation="vertical"
+    android:background="#fff"
     >
     <com.wd.doctor.MyView.MyTitleView
         android:id="@+id/myTitleView"
@@ -15,4 +16,66 @@
         android:padding="@dimen/dp_10"
         >
     </com.wd.doctor.MyView.MyTitleView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_6"
+        android:background="#f2f2f2"
+        ></View>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerChat"
+        android:layout_weight="1"
+        ></androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#BCB9B9"
+        >
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:id="@+id/btn_voice"
+            android:src="@mipmap/common_icon_voice_n"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp_10"
+            ></ImageView>
+        <EditText
+            android:id="@+id/etSendContent"
+            android:layout_width="@dimen/dp_250"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/send_edit_bg"
+            android:textSize="12sp"
+            android:textColor="#333"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:lineSpacingExtra="16sp"
+            ></EditText>
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:id="@+id/btn_expression"
+            android:src="@mipmap/common_icon_expression_n"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp_10"
+            ></ImageView>
+        <ImageView
+            android:id="@+id/imgSendMessage"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@mipmap/common_icon_send_n"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp_10"
+            ></ImageView>
+    </LinearLayout>
 </LinearLayout>
