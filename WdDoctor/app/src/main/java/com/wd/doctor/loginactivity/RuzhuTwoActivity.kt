@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.os.SystemClock
-import android.text.InputType
 import android.text.TextUtils
 import com.wd.doctor.R
 import com.wd.doctor.base.BaseActivity

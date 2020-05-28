@@ -21,21 +21,21 @@ interface ApiService {
     @POST(ApiUrl.user_register)
     @FormUrlEncoded
     open fun getRegister(@Field("email") email: String,
-    @Field("code") count: String,
-    @Field("pwd1") pwd1:String,
-    @Field("pwd2") pwd2:String,
-    @Field("name") name:String,
-    @Field("inauguralHospital") inauguralHospital:String,
-    @Field("departmentId") departmentId:String,
-    @Field("jobTitleId") jobTitleId:String,
-    @Field("personalProfile") personalProfile:String,
-    @Field("goodField") goodField:String
-    ):Observable<LoginBean>
+                         @Field("code") count: String,
+                         @Field("pwd1") pwd1:String,
+                         @Field("pwd2") pwd2:String,
+                         @Field("name") name:String,
+                         @Field("inauguralHospital") inauguralHospital:String,
+                         @Field("departmentId") departmentId:Int,
+                         @Field("jobTitleId") jobTitleId:Int,
+                         @Field("personalProfile") personalProfile:String,
+                         @Field("goodField") goodField:String
+    ):Observable<RegistBean>
     //查询科室
    // @GET("mobile.bwstudent.com/health/share/knowledgeBase/v1/findDepartment")
     //@FormUrlEncoded
     //open fun getkeshi() :Observable<>
-    ):Observable<RegistBean>
+    //):Observable<RegistBean>
     //查询医生的问诊记录列表
     @GET(ApiUrl.getwen)
     @FormUrlEncoded
