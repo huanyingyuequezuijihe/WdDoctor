@@ -40,4 +40,7 @@ object ApiUrl{
     const val modifyAllStatus="health/doctor/verify/v1/modifyAllStatus"
     //查询医生历史问诊记录列表
     const val findHistoryInquiryRecord="health/doctor/inquiry/verify/v1/findHistoryInquiryRecord"
+    //查询医生的问诊记录列表
+    const val getwen="health/doctor/inquiry/verify/v1/findInquiryRecordList"
+
 }

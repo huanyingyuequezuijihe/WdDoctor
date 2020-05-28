@@ -31,12 +31,10 @@ interface ApiService {
     @Field("personalProfile") personalProfile:String,
     @Field("goodField") goodField:String
     ):Observable<RegistBean>
-    //查询科室
-   // @GET("mobile.bwstudent.com/health/share/knowledgeBase/v1/findDepartment")
-    //@FormUrlEncoded
-    //open fun getkeshi() :Observable<>
-
-
+    //查询医生的问诊记录列表
+    @GET(ApiUrl.getwen)
+    @FormUrlEncoded
+    open fun getwen(@Field("doctorId")doctorId:Int,@Field("sessionId")sessionId:String):Observable<WenBean>
     //登录
     @POST(ApiUrl.user_login)
     @FormUrlEncoded
