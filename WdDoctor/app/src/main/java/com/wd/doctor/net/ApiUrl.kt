@@ -22,8 +22,10 @@ object ApiUrl{
     const val sendEmailCode="health/doctor/v1/sendEmailCode"
     //申请入驻
     const val applyJoin="health/doctor/v1/applyJoin"
-    //登录
-    const val login="health/doctor/v1/login"
+    //科室查询
+    const val ruzhu_keshi="mobile.bwstudent.com/health/share/knowledgeBase/v1/findDepartment"
+    //职称查询
+    const val ruzhu_zhicheng="health/doctor/v1/findJobTitleList"
     //根据医生id查询医生信息
     const val findDoctorById="health/doctor/verify/v1/findDoctorById"
     //病友圈列表展示
@@ -38,6 +40,9 @@ object ApiUrl{
     const val modifyAllStatus="health/doctor/verify/v1/modifyAllStatus"
     //查询医生历史问诊记录列表
     const val findHistoryInquiryRecord="health/doctor/inquiry/verify/v1/findHistoryInquiryRecord"
+    //查询医生的问诊记录列表
+    const val getwen="health/doctor/inquiry/verify/v1/findInquiryRecordList"
+
     //查询问诊聊天记录
     const val findInquiryDetailsList="health/doctor/inquiry/verify/v1/findInquiryDetailsList"
     //发送消息（文本消息）

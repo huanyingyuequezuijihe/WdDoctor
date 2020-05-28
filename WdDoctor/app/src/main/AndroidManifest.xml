@@ -19,6 +19,10 @@
         <activity android:name=".activity.TixianRecordActivity" />
         <activity android:name=".activity.WithdrawDepositNextActivity" />
         <activity android:name=".activity.AutomaticActivity" />
+        <activity android:name=".loginactivity.RuZhuSuccActivity"></activity>
+        <activity android:name=".activity.TixianRecordActivity" />
+        <activity android:name=".activity.WithdrawDepositNextActivity" />
+        <activity android:name=".activity.AutomaticActivity" />
         <activity android:name=".activity.BangingIdcardActivity" />
         <activity android:name=".activity.BangdingBackcardActivity" />
         <activity android:name=".activity.WithdrawDepositActivity" />
@@ -42,8 +46,8 @@
         <activity android:name=".loginactivity.RuzhuOneActivity" />
         <activity android:name=".loginactivity.RuzhuTwoActivity" />
         <activity android:name=".loginactivity.RuzhuThreeActivity" />
-        <activity android:name=".loginactivity.WangActivity" />
-        <activity android:name=".loginactivity.SheActivity" />
+        <activity android:name=".loginactivity.WangActivity"/>
+        <activity android:name=".loginactivity.SheActivity"/>
         <activity android:name=".QDActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
