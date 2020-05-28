@@ -78,4 +78,7 @@ interface ApiService {
     @POST(ApiUrl.pushMessage)
     @FormUrlEncoded
     open fun getPushMessageData(@Field("inquiryId") inquiryId :Int,@Field("content") content:String,@Query("type") type:Int,@Query("userId") userId:Int): Observable<PushMessageBean>
+    //查询问诊聊天记录
+    @GET(ApiUrl.findInquiryDetailsList)
+    open fun getFindInquiryDetailsListData(@Query("page") page:Int,@Query("count") count:Int,@Query("inquiryId") inquiryId:Int): Observable<FindInquiryDetailsListBean>
 }
