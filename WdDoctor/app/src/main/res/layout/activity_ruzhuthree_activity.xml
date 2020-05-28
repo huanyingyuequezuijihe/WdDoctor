@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <ImageView
         android:id="@+id/ruzhu_back_three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/common_icon_back_black_n"
-        android:layout_margin="@dimen/dp_15"/>
+        android:layout_margin="@dimen/dp_15"
+        android:src="@mipmap/common_icon_back_black_n" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_30"
         android:layout_marginRight="@dimen/dp_30"
-        android:layout_marginLeft="@dimen/dp_30">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,18 +32,40 @@
                 android:textColor="#666666"
                 android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/login_ed_jian"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_150"
                 android:layout_marginTop="@dimen/dp_10"
-                android:enabled="true"
-                android:inputType="textMultiLine"
-                android:maxLines="10"
-                android:minLines="6"
-                android:scrollbars="vertical"
-                android:textColor="#333333"
-                android:textSize="12sp" />
+                android:background="@drawable/resume_bg_sele">
+
+                <EditText
+                    android:id="@+id/doctor_resume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@null"
+                    android:maxLength="500"
+                    android:textColor="#999"
+                    android:textSize="@dimen/dp_10"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></EditText>
+
+                <TextView
+                    android:id="@+id/resume_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_11"
+                    android:text="500字以内"
+                    android:textColor="#3087ea"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"></TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -57,18 +81,40 @@
                 android:textColor="#666666"
                 android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/login_ed_shan"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_150"
+                android:id="@+id/r2"
                 android:layout_marginTop="@dimen/dp_10"
-                android:enabled="true"
-                android:inputType="textMultiLine"
-                android:maxLines="10"
-                android:minLines="6"
-                android:scrollbars="vertical"
-                android:textColor="#333333"
-                android:textSize="12sp" />
+                android:background="@drawable/resume_bg_sele">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:id="@+id/doctor_adept"
+                    android:textSize="@dimen/dp_10"
+                    android:textColor="#999"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:background="@null"
+                    android:maxLength="300"
+                    ></EditText>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/adept_count"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_11"
+                    android:textSize="10sp"
+                    android:textColor="#3087ea"
+                    android:text="300字以内"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    ></TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -83,6 +129,7 @@
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="@dimen/dp_15"
                 android:background="@color/login_btn"
+
                 android:text="申请入驻"
                 android:textColor="#ffffff"
                 android:textSize="16sp" />
@@ -90,7 +137,6 @@
 
 
     </LinearLayout>
-
 
 
 </LinearLayout>

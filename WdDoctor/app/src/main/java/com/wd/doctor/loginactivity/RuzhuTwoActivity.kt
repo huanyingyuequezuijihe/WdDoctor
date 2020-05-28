@@ -98,7 +98,7 @@ class RuzhuTwoActivity : BaseActivity(),CsFaYanView {
                     SpCacheUtil.spCacheUtil.saveStringData("email",zhang)
                     SpCacheUtil.spCacheUtil.saveStringData("yan",yan)
 
-                    startActivity<RuzhuOneActivity>()
+                    startActivityAndFinish<RuzhuOneActivity>()
 
                 }
 

@@ -26,11 +26,11 @@ interface ApiService {
     @Field("pwd2") pwd2:String,
     @Field("name") name:String,
     @Field("inauguralHospital") inauguralHospital:String,
-    @Field("departmentId") departmentId:String,
-    @Field("jobTitleId") jobTitleId:String,
+    @Field("departmentId") departmentId:Int,
+    @Field("jobTitleId") jobTitleId:Int,
     @Field("personalProfile") personalProfile:String,
     @Field("goodField") goodField:String
-    ):Observable<LoginBean>
+    ):Observable<RegistBean>
     //查询科室
    // @GET("mobile.bwstudent.com/health/share/knowledgeBase/v1/findDepartment")
     //@FormUrlEncoded
