@@ -3,6 +3,7 @@ package com.wd.doctor.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,7 @@ import com.wd.doctor.util.TimeStampUtil;
 
 import java.util.ArrayList;
 
-//待实现功能
+//聊天   好友
 public class InquiryListAdapter extends RecyclerView.Adapter<InquiryListAdapter.InquiryListHolder> {
      private ArrayList<InquiryBean> list=new ArrayList<>();
      private Context context;
@@ -50,7 +51,10 @@ public class InquiryListAdapter extends RecyclerView.Adapter<InquiryListAdapter.
       @Override
       public void onClick(View v) {
           Intent intent=new Intent(context, UserChatActivity.class);
-          context.startActivity(intent);
+        Bundle bundle = new Bundle();
+        bundle.putString("name",list.get(position).getUsername());
+        intent.putExtras(bundle);
+        context.startActivity(intent);
       }
     });
 

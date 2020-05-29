@@ -1,5 +1,6 @@
 package com.wd.doctor.activity
 
+import android.content.Intent
 import android.os.Handler
 import android.os.Message
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,9 +47,12 @@ class UserChatActivity : BaseActivity(), PushMessageView, FindInquiryDetailsList
 
     override fun initListener() {
         super.initListener()
+        val stringExtra = getIntent().getStringExtra("name")
         //返回
         myTitleView.back?.setOnClickListener { finish() }
-        myTitleView.title?.setText("鞠婧祎")
+        stringExtra?.let {
+            myTitleView.title?.setText(stringExtra)
+        }
         //发消息
         imgSendMessage.setOnClickListener {
             val etMessage = etSendContent.text.toString()
