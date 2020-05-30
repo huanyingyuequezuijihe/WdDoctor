@@ -38,7 +38,6 @@ interface ApiService {
     //):Observable<RegistBean>
     //查询医生的问诊记录列表
     @GET(ApiUrl.getwen)
-    @FormUrlEncoded
     open fun getwen(@Field("doctorId")doctorId:Int,@Field("sessionId")sessionId:String):Observable<WenBean>
     //登录
     @POST(ApiUrl.user_login)
@@ -62,6 +61,9 @@ interface ApiService {
     @POST(ApiUrl.sendEmailCode)
     @FormUrlEncoded
     open fun sendEmailCode(@Field("email") email:String):Observable<SendEmailCodeBean>
+    //被采纳建议
+    @GET(ApiUrl.beicaina_suggest)
+    open fun getSuggest(@Query("doctorId") doctorId:Int, @Query("sessionId")sessionId:String, @Query("page") page:Int, @Query("count") count:Int):Observable<SuggestBean>
     //根据医生id查询医生信息
     @GET(ApiUrl.findDoctorById)
     open fun findDoctorById(): Observable<FindDoctorByIdBean>

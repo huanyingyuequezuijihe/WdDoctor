@@ -21,4 +21,14 @@
         android:background="#AEAEAE"
         >
     </View>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSuggest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
 </LinearLayout>
