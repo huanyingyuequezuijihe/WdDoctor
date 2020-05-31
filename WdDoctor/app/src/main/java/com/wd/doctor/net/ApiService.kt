@@ -99,4 +99,7 @@ interface ApiService {
     //查询系统形象照
     @GET(ApiUrl.findSystemImagePic)
     open fun getFindSystemImagePicData(): Observable<FindSystemImagePicBean>
+    //查询医生钱包
+    @GET(ApiUrl.findDoctorWallet)
+    open fun getFindDoctorWalletData(): Observable<FindDoctorWalletBean>
 }

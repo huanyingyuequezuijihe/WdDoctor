@@ -53,4 +53,6 @@ object ApiUrl{
     const val findDoctorGiftList="health/doctor/verify/v1/findDoctorGiftList"
     //查询系统形象照
     const val findSystemImagePic="health/doctor/v1/findSystemImagePic"
+    //查询医生钱包
+    const val findDoctorWallet="health/doctor/verify/v1/findDoctorWallet"
 }
