@@ -93,4 +93,7 @@ interface ApiService {
     //查询问诊聊天记录
     @GET(ApiUrl.findInquiryDetailsList)
     open fun getFindInquiryDetailsListData(@Query("page") page:Int,@Query("count") count:Int,@Query("inquiryId") inquiryId:Int): Observable<FindInquiryDetailsListBean>
+    //查询医生收到的礼物列表
+    @GET(ApiUrl.findDoctorGiftList)
+    open fun getFindDoctorGiftListData(@Query("page") page:Int,@Query("count") count:Int): Observable<FindDoctorGiftListBean>
 }

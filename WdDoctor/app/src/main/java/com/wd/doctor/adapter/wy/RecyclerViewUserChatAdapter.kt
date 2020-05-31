@@ -30,7 +30,14 @@ class RecyclerViewUserChatAdapter: RecyclerView.Adapter<RecyclerViewUserChatAdap
         }
     }
     class MyHolder(itemView: View): RecyclerView.ViewHolder(itemView)
-
+    override fun getItemViewType(position: Int): Int {
+        val direction = list.get(position).direction
+        if(direction==1){
+            return 0//医生
+        }else{
+            return 1//患者
+        }
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
         if(viewType==0){
             return MyHolder(FindInquiryDetailsListMyView(parent?.context))
@@ -54,15 +61,6 @@ class RecyclerViewUserChatAdapter: RecyclerView.Adapter<RecyclerViewUserChatAdap
             //患者
             var useritemView=holder.itemView as FindInquiryDetailsListUserView
             useritemView.setData(data)
-        }
-    }
-
-    override fun getItemViewType(position: Int): Int {
-        val direction = list.get(position).direction
-        if(direction==1){
-            return 0//医生
-        }else{
-            return 1//患者
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.wd.doctor.activity
 
+import android.content.Intent
 import android.os.Handler
 import android.os.Message
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,9 +47,22 @@ class UserChatActivity : BaseActivity(), PushMessageView, FindInquiryDetailsList
 
     override fun initListener() {
         super.initListener()
+        //布局管理器
+        val linearLayoutManager = LinearLayoutManager(this)
+        linearLayoutManager.stackFromEnd = false //列表再底部开始展示，反转后由上面开始展示
+        linearLayoutManager.reverseLayout = true //列表翻转
+        recyclerChat.layoutManager=linearLayoutManager
+        //消息
+        val stringExtra = getIntent().getStringExtra("name")
         //返回
-        myTitleView.back?.setOnClickListener { finish() }
-        myTitleView.title?.setText("鞠婧祎")
+        myTitleView.back?.setOnClickListener {
+            finish()
+            //销毁
+            handler.removeCallbacks(runnable)
+        }
+        stringExtra?.let {
+            myTitleView.title?.setText(stringExtra)
+        }
         //发消息
         imgSendMessage.setOnClickListener {
             val etMessage = etSendContent.text.toString()
@@ -60,8 +74,6 @@ class UserChatActivity : BaseActivity(), PushMessageView, FindInquiryDetailsList
 
     override fun initData() {
         super.initData()
-        //布局管理器
-        recyclerChat.layoutManager=LinearLayoutManager(this)
         runnable.run()
     }
 
@@ -80,8 +92,17 @@ class UserChatActivity : BaseActivity(), PushMessageView, FindInquiryDetailsList
         val result = response.result
         recyclerChat.adapter=adapter
         adapter.updataData(result)
+        //recyclerChat.scrollToPosition(adapter.getItemCount());
     }
 
     override fun onFindInquiryDetailsListError(msg: String) {
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.destroyView()
+        presenterChat.destroyView()
+        //销毁
+        handler.removeCallbacks(runnable)
     }
 }

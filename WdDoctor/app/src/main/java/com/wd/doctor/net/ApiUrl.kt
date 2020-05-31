@@ -49,4 +49,6 @@ object ApiUrl{
     const val findInquiryDetailsList="health/doctor/inquiry/verify/v1/findInquiryDetailsList"
     //发送消息（文本消息）
     const val pushMessage="health/doctor/inquiry/verify/v1/pushMessage"
+    //查询医生收到的礼物列表
+    const val findDoctorGiftList="health/doctor/verify/v1/findDoctorGiftList"
 }
