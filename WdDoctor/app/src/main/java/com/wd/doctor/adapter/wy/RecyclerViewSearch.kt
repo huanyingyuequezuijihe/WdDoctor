@@ -23,6 +23,7 @@ class RecyclerViewSearch :RecyclerView.Adapter<RecyclerViewSearch.SearchHolder>(
     //加载方法
     fun updateList(list: List<SearchSickCircleBean.Result>){
         list?.let {
+            this.list.clear()
             this.list.addAll(list)
             notifyDataSetChanged()
         }

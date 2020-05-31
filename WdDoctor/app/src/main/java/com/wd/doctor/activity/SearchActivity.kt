@@ -27,6 +27,12 @@ class SearchActivity : BaseActivity(), SearchSickCircleView {
         btn_ss.setOnClickListener {
             val etSContent = etSsContent.text.toString()
             presenter.onSearchSickCircleDatas(etSContent)
+            //添加
+            myFlowView.addView(etSContent)
+        }
+        //流式布局
+        myFlowView.setAddText {
+            presenter.onSearchSickCircleDatas(it)
         }
     }
     override fun initData() {
@@ -38,12 +44,21 @@ class SearchActivity : BaseActivity(), SearchSickCircleView {
             recyclerSearchCircle.visibility=View.GONE
             linearNo.visibility= View.VISIBLE
             tvNoSearch.setText("没有找到"+etSsContent.text.toString()+"的相关病友圈")
+        }else{
+            recyclerSearchCircle.visibility=View.VISIBLE
+            linearNo.visibility=View.GONE
+            recyclerSearchCircle.adapter=adapter
+            adapter.updateList(response?.result!!)
         }
-        recyclerSearchCircle.adapter=adapter
-        adapter.updateList(response?.result!!)
+        //查询完   清空
+        etSsContent.setText("")
     }
 
     override fun onSearchSickCircleError(message: String?) {
         myToast("获取数据异常"+message)
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.destroyView()
     }
 }
