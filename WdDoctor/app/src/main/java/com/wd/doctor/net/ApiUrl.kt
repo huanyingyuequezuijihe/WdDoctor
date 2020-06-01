@@ -51,4 +51,8 @@ object ApiUrl{
     const val pushMessage="health/doctor/inquiry/verify/v1/pushMessage"
     //查询医生收到的礼物列表
     const val findDoctorGiftList="health/doctor/verify/v1/findDoctorGiftList"
+    //查询系统形象照
+    const val findSystemImagePic="health/doctor/v1/findSystemImagePic"
+    //查询医生钱包
+    const val findDoctorWallet="health/doctor/verify/v1/findDoctorWallet"
 }

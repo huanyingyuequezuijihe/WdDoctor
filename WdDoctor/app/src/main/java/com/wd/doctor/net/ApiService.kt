@@ -96,4 +96,10 @@ interface ApiService {
     //查询医生收到的礼物列表
     @GET(ApiUrl.findDoctorGiftList)
     open fun getFindDoctorGiftListData(@Query("page") page:Int,@Query("count") count:Int): Observable<FindDoctorGiftListBean>
+    //查询系统形象照
+    @GET(ApiUrl.findSystemImagePic)
+    open fun getFindSystemImagePicData(): Observable<FindSystemImagePicBean>
+    //查询医生钱包
+    @GET(ApiUrl.findDoctorWallet)
+    open fun getFindDoctorWalletData(): Observable<FindDoctorWalletBean>
 }

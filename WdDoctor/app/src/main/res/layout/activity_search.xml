@@ -59,7 +59,11 @@
             >
         </TextView>
     </LinearLayout>
-
+    <com.wd.doctor.widget.MyFlowView
+        android:id="@+id/myFlowView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_160">
+    </com.wd.doctor.widget.MyFlowView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerSearchCircle"
         android:layout_width="match_parent"

@@ -13,6 +13,7 @@
         android:layout_height="@dimen/dp_240"
         android:background="@mipmap/tree_wy"
         android:padding="@dimen/dp_20"
+        android:id="@+id/constraintMe"
         >
         <ImageView
             android:id="@+id/imgBackMe"

@@ -72,13 +72,13 @@
         android:layout_marginLeft="@dimen/dp_20"
         android:textSize="@dimen/dp_48"
         android:textColor="#fff"
-        android:id="@+id/my_money"
+        android:id="@+id/tvMyMoney"
         ></TextView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="10sp"
-        android:layout_below="@id/my_money"
+        android:layout_below="@id/tvMyMoney"
         android:layout_marginLeft="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_10"
         android:text="(满2000可提现)"
