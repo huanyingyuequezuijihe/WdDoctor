@@ -64,6 +64,9 @@ interface ApiService {
     //被采纳建议
     @GET(ApiUrl.beicaina_suggest)
     open fun getSuggest(@Query("doctorId") doctorId:Int, @Query("sessionId")sessionId:String, @Query("page") page:Int, @Query("count") count:Int):Observable<SuggestBean>
+    //历史问诊评价
+    @GET(ApiUrl.getlishiping)
+    open fun getping(@Query("doctorId") doctorId:Int, @Query("sessionId")sessionId:String,@Query("recordId") recordId:Int):Observable<LiShiPingBean>
     //根据医生id查询医生信息
     @GET(ApiUrl.findDoctorById)
     open fun findDoctorById(): Observable<FindDoctorByIdBean>
