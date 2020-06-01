@@ -47,6 +47,14 @@ class MyWalletActivity : BaseActivity(), FindDoctorWalletView{
     override fun onFindDoctorWalletSuccess(response: FindDoctorWalletBean) {
         //成功
         val result = response.result
+        val whetherBindIdCard = result.whetherBindIdCard
+        val whetherBindBankCard = result.whetherBindBankCard
+        if(whetherBindIdCard!=1){
+            tvBinDing.setText("查看绑定")
+        }
+        if(whetherBindBankCard!=1){
+            tvBinDing.setText("查看绑定")
+        }
         tvMyMoney.setText(""+result.balance)
     }
 }

@@ -12,67 +12,113 @@
         android:layout_height="wrap_content"
         android:id="@+id/title_view"
         android:layout_marginTop="@dimen/dp_50"
-        ></com.wd.doctor.MyView.MyTitleView>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="@dimen/dp_260"
-        android:layout_height="@dimen/dp_160"
-        android:layout_marginTop="@dimen/dp_50"
-        android:layout_marginRight="@dimen/dp_50"
-        android:layout_marginLeft="@dimen/dp_50"
-        android:background="@mipmap/id_card_front"
         >
+    </com.wd.doctor.MyView.MyTitleView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="344dp"
+        android:layout_height="@dimen/dp_160"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_50">
+
         <ImageView
-            android:layout_width="@dimen/dp_64"
-            android:layout_height="@dimen/dp_64"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="@dimen/dp_30"
-            android:src="@mipmap/my_icon_camera_n"
-            android:id="@+id/camera_iccard"
-            ></ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textColor="#3087ea"
-            android:text="点击拍摄/上传人像面"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/camera_iccard"
-            android:layout_marginTop="@dimen/dp_20"
-            app:layout_constraintRight_toRightOf="parent"
-            ></TextView>
+            android:id="@+id/imgCardPerson"
+            android:layout_width="18dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/common_icon_close_n"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/card1"></ImageView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card1"
+            android:layout_width="@dimen/dp_260"
+            android:layout_height="@dimen/dp_160"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imgIDCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/id_card_front"></ImageView>
+
+            <ImageView
+                android:id="@+id/cameraCardP"
+                android:layout_width="@dimen/dp_64"
+                android:layout_height="@dimen/dp_64"
+                android:layout_marginTop="@dimen/dp_30"
+                android:src="@mipmap/my_icon_camera_n"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="点击拍摄/上传人像面"
+                android:textColor="#3087ea"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cameraCardP"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="@dimen/dp_260"
+        android:layout_width="340dp"
         android:layout_height="@dimen/dp_160"
         android:layout_marginLeft="@dimen/dp_50"
-        android:layout_marginTop="@dimen/dp_50"
-        android:layout_marginRight="@dimen/dp_50"
-        android:background="@mipmap/id_card_back">
-        <ImageView
-            android:layout_width="@dimen/dp_64"
-            android:layout_height="@dimen/dp_64"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="@dimen/dp_30"
-            android:src="@mipmap/my_icon_camera_n"
-            android:id="@+id/camera_recitecard"
-            ></ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textColor="#3087ea"
-            android:text="点击拍摄/上传徽面"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/camera_recitecard"
-            android:layout_marginTop="@dimen/dp_20"
-            app:layout_constraintRight_toRightOf="parent"
-            ></TextView>
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_50">
 
+        <ImageView
+            android:id="@+id/imgCardCH"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/common_icon_close_n"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/card2"></ImageView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card2"
+            android:layout_width="@dimen/dp_260"
+            android:layout_height="@dimen/dp_160"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imgIDCardCH"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/id_card_back">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/cameraCardCH"
+                android:layout_width="@dimen/dp_64"
+                android:layout_height="@dimen/dp_64"
+                android:layout_marginTop="@dimen/dp_30"
+                android:src="@mipmap/my_icon_camera_n"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="点击拍摄/上传徽面"
+                android:textColor="#3087ea"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cameraCardCH"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -90,6 +136,7 @@
         android:layout_marginLeft="@dimen/dp_30"
         android:background="@drawable/sendbutton_bg_pwd"
         app:layout_constraintBottom_toBottomOf="parent"
-        ></Button>
+        >
+    </Button>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

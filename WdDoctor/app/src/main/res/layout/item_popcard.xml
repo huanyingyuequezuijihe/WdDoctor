@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#919191"
+    android:gravity="center"
+    >
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_next_pwd"
+        android:text="打开相册"
+        android:textColor="#3087ea"
+        android:textSize="@dimen/sp_14"
+        >
+    </Button>
+    <Button
+        android:id="@+id/btn_cancle"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_next_pwd"
+        android:text="取消"
+        android:textColor="#3087ea"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginTop="@dimen/dp_3"
+        >
+    </Button>
+</LinearLayout>
