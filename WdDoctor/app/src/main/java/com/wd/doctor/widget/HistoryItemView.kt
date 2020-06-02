@@ -5,10 +5,12 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.RelativeLayout
 import com.wd.doctor.R
+import com.wd.doctor.activity.LiShiPingActivity
 import com.wd.doctor.bean.wy.FindHistoryInquiryRecordBean
 import com.wd.doctor.net.NetManager
 import com.wd.doctor.util.TimeStampUtil
 import kotlinx.android.synthetic.main.item_history.view.*
+import org.jetbrains.anko.startActivity
 
 /**
  * @author 王阳
@@ -39,6 +41,8 @@ class HistoryItemView: RelativeLayout {
         //查看问诊记录
         btnSelectHistory.setOnClickListener {  }
         //查看评论
-        btnEvaluate.setOnClickListener {  }
+        btnEvaluate.setOnClickListener {
+            context.startActivity<LiShiPingActivity>()
+        }
     }
 }

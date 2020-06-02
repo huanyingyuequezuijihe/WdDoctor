@@ -28,6 +28,8 @@ object ApiUrl{
     const val ruzhu_zhicheng="health/doctor/v1/findJobTitleList"
     //被采纳建议
     const val beicaina_suggest="health/doctor/verify/v1/findMyAdoptedCommentList"
+    //历史问诊评价
+    const val getlishiping="health/doctor/inquiry/verify/v1/findDoctorEvaluate"
     //根据医生id查询医生信息
     const val findDoctorById="health/doctor/verify/v1/findDoctorById"
     //病友圈列表展示

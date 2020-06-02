@@ -46,6 +46,7 @@
         <activity android:name=".loginactivity.RuzhuThreeActivity" />
         <activity android:name=".loginactivity.WangActivity" />
         <activity android:name=".loginactivity.SheActivity" />
+        <activity android:name=".activity.LiShiPingActivity"/>
         <activity android:name=".QDActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

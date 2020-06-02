@@ -34,7 +34,9 @@ class QDActivity : BaseActivity() {
 
     override fun initListener() {
         tv_dao.setOnClickListener {
+            time=0
             startActivityAndFinish<LoginActivity>()
+
         }
         //开启线程
         Thread(cutTask()).start()
@@ -54,6 +56,8 @@ class QDActivity : BaseActivity() {
             }
         }
     }
+
+
 
     override fun onDestroy() {
         super.onDestroy()
