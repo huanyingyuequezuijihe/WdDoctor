@@ -1,5 +1,6 @@
 package com.wd.doctor.net
 
+import com.wd.doctor.bean.BindDoctorIdCardBean
 import com.wd.doctor.bean.SendEmailCodeBean
 import com.wd.doctor.bean.cs.*
 import com.wd.doctor.bean.wy.*
@@ -102,4 +103,8 @@ interface ApiService {
     //查询医生钱包
     @GET(ApiUrl.findDoctorWallet)
     open fun getFindDoctorWalletData(): Observable<FindDoctorWalletBean>
+    //绑定身份证
+    @POST(ApiUrl.bindDoctorIdCard)
+    @FormUrlEncoded
+    open fun getBindDoctorIdCardData(@Field("doctorId") doctorId :Int,@Field("name") name:String,@Query("sex") sex:String): Observable<BindDoctorIdCardBean>
 }

@@ -55,4 +55,6 @@ object ApiUrl{
     const val findSystemImagePic="health/doctor/v1/findSystemImagePic"
     //查询医生钱包
     const val findDoctorWallet="health/doctor/verify/v1/findDoctorWallet"
+    //绑定身份证
+    const val bindDoctorIdCard="health/doctor/verify/v1/bindDoctorIdCard"
 }
